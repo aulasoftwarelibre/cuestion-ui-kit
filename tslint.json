@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-react"],
+  "jsRules": {},
+  "rules": {
+    "arrow-parens": false,
+    "quotemark": [true, "double", "jsx-double"],
+    "no-implicit-dependencies": [true, "dev"],
+    "interface-name": [true, "never-prefix"],
+    "no-submodule-imports": false,
+    "trailing-comma": true
+  },
+  "rulesDirectory": []
+}

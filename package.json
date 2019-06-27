@@ -1,0 +1,80 @@
+{
+  "name": "react-ui-kit-boilerplate",
+  "version": "1.0.0",
+  "description": "A React UI Kit boilerplate with Styled Components, Typescript and Jest",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "generate": "plop --plopfile ./.plop/plop.config.js",
+    "deploy-storybook": "storybook-to-ghpages",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrooriente/react-ui-kit-boilerplate.git"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "typescript",
+    "boilerplate",
+    "storybook"
+  ],
+  "author": "Leandro Oriente <leandroriente@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrooriente/react-ui-kit-boilerplate/issues"
+  },
+  "homepage": "https://github.com/leandrooriente/react-ui-kit-boilerplate#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-options": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "@types/jest": "^23.3.2",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-test-renderer": "^16.0.2",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-info": "^4.1.2",
+    "@types/storybook__addon-knobs": "^5.0.1",
+    "@types/storybook__addon-options": "^4.0.2",
+    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.0",
+    "cache-loader": "^4.0.1",
+    "husky": "^1.0.0-rc.15",
+    "jest": "^23.6.0",
+    "jest-styled-components": "^6.2.1",
+    "plop": "^2.1.0",
+    "react-docgen-typescript-loader": "^3.0.0",
+    "react-test-renderer": "^16.5.2",
+    "ts-jest": "^23.10.1",
+    "ts-loader": "^5.1.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
+  }
+}
