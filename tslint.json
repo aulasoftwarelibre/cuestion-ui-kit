@@ -4,10 +4,11 @@
   "jsRules": {},
   "rules": {
     "arrow-parens": false,
-    "quotemark": [true, "double", "jsx-double"],
-    "no-implicit-dependencies": [true, "dev"],
     "interface-name": [true, "never-prefix"],
+    "jsx-no-lambda": false,
+    "no-implicit-dependencies": [true, "dev"],
     "no-submodule-imports": false,
+    "quotemark": [true, "double", "jsx-double"],
     "trailing-comma": true
   },
   "rulesDirectory": []

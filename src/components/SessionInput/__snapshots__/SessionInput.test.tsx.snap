@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SessionInput should render correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+      data-shrink={false}
+      htmlFor="session-code-input"
+    >
+      Session Code
+    </label>
+    <div
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-57 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-58"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-describedby="session-code-input-helper-text"
+        aria-invalid={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        id="session-code-input"
+        name="code"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-contained"
+      id="session-code-input-helper-text"
+    >
+      and press Enter
+    </p>
+  </div>
+</form>
+`;
