@@ -1,3 +1,4 @@
+import { shallow } from "enzyme";
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
@@ -12,5 +13,14 @@ describe("SessionInput", () => {
       .toJSON();
 
     expect(component).toMatchSnapshot();
+  });
+
+  it("should respond to change event", () => {
+    const wrapper = shallow(<SessionInput handleSubmit={mockHandleSubmit} />);
+    wrapper.find("#session-code-input").simulate("change", {
+      target: { name: "session-code-input", value: "1234" }
+    });
+
+    expect(wrapper).toMatchSnapshot();
   });
 });

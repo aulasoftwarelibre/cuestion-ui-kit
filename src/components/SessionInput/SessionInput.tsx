@@ -40,7 +40,7 @@ const SessionInput: React.FunctionComponent<Props> = ({
         helperText={
           code.length === length
             ? "and press ENTER."
-            : "Enter 4 characters code."
+            : `Enter ${length} characters code.`
         }
         onChange={handleChange()}
         value={code}
