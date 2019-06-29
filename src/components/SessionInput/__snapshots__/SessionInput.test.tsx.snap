@@ -63,7 +63,7 @@ exports[`SessionInput should render correctly 1`] = `
       className="MuiFormHelperText-root MuiFormHelperText-contained"
       id="session-code-input-helper-text"
     >
-      and press Enter
+      Enter 4 characters code.
     </p>
   </div>
 </form>
