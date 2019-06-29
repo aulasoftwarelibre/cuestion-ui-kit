@@ -1,7 +1,7 @@
 {
   "name": "aulasoftwarelibre-cuestion-ui-kit",
   "version": "1.0.0",
-  "description": "A React UI Kit boilerplate with Styled Components, Typescript and Jest",
+  "description": "Cuestion UI Kit",
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
@@ -29,7 +29,7 @@
     "storybook"
   ],
   "author": "Aula de Software Libre <aulasoftwarelibre@uco.es>",
-  "license": "GPL3",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/aulasoftwarelibre/cuestion-ui-kit/issues"
   },
