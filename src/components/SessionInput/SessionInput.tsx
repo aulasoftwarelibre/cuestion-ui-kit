@@ -1,5 +1,7 @@
 import TextField from "@material-ui/core/TextField";
 import * as React from "react";
+import { FormattedMessage } from "react-intl";
+import messages from "../../languages/messages";
 
 interface Props {
   handleSubmit: any;
@@ -36,7 +38,7 @@ const SessionInput: React.FunctionComponent<Props> = ({
         id="session-code-input"
         name="code"
         type="text"
-        label="Session Code"
+        label={<FormattedMessage {...messages.sessionCode} />}
         helperText={
           code.length === length
             ? "and press ENTER."
