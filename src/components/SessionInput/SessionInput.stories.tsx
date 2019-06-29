@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { text, withKnobs } from "@storybook/addon-knobs";
+import { number, withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import { wInfo } from "../../utils/wInfo";
@@ -10,5 +10,10 @@ stories.addDecorator(withKnobs);
 
 stories.add(
   "default",
-  wInfo()(() => <SessionInput handleSubmit={action("session-code")} />)
+  wInfo()(() => (
+    <SessionInput
+      length={number("Length", 4, { range: true, min: 4, max: 8, step: 1 })}
+      handleSubmit={action("session-code")}
+    />
+  ))
 );
