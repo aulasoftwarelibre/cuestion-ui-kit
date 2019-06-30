@@ -41,8 +41,8 @@ const SessionInput: React.FunctionComponent<Props> = ({
         label={<FormattedMessage {...messages.sessionCode} />}
         helperText={
           code.length === length
-            ? "and press ENTER."
-            : `Enter ${length} characters code.`
+            ? <FormattedMessage {...messages.pressEnter} />
+            : <FormattedMessage {...messages.enterLengthCharactersCode} values={{ length }} />
         }
         onChange={handleChange()}
         value={code}

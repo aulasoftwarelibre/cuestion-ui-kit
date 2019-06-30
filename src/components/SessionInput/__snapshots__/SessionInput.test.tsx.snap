@@ -65,7 +65,9 @@ exports[`SessionInput should render correctly 1`] = `
       className="MuiFormHelperText-root MuiFormHelperText-contained"
       id="session-code-input-helper-text"
     >
-      Enter 4 characters code.
+      <span>
+        Enter 4 characters code
+      </span>
     </p>
   </div>
 </form>
