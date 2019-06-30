@@ -1,22 +1,26 @@
-import { shallow } from "enzyme";
 import * as React from "react";
-import * as renderer from "react-test-renderer";
 
+import {
+  rendererWithIntl,
+  shallowWithIntl
+} from "../../helpers/intl-enzyme-test-helper";
 import SessionInput from "./SessionInput";
 
 describe("SessionInput", () => {
   const mockHandleSubmit = jest.fn();
 
   it("should render correctly", () => {
-    const component = renderer
-      .create(<SessionInput handleSubmit={mockHandleSubmit} />)
-      .toJSON();
+    const component = rendererWithIntl(
+      <SessionInput handleSubmit={mockHandleSubmit} />
+    ).toJSON();
 
     expect(component).toMatchSnapshot();
   });
 
   it("should tell to press ENTER", () => {
-    const wrapper = shallow(<SessionInput handleSubmit={mockHandleSubmit} />);
+    const wrapper = shallowWithIntl(
+      <SessionInput handleSubmit={mockHandleSubmit} />
+    );
     wrapper.find("#session-code-input").simulate("change", {
       target: { name: "session-code-input", value: "1234" }
     });
@@ -27,7 +31,7 @@ describe("SessionInput", () => {
   });
 
   it("should tell to wait to fill code", () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <SessionInput length={6} handleSubmit={mockHandleSubmit} />
     );
     wrapper.find("#session-code-input").simulate("change", {

@@ -11,7 +11,9 @@ import languages from "../src/languages";
 
 addLocaleData(en);
 addLocaleData(es);
-const getMessages = locale => languages[locale];
+const getMessages = locale => {
+  return languages[locale];
+};
 
 // Set intl configuration
 setIntlConfig({
