@@ -12,9 +12,7 @@ exports[`SessionInput should render correctly 1`] = `
       data-shrink={false}
       htmlFor="session-code-input"
     >
-      <span>
-        Session Code
-      </span>
+      Session Code
     </label>
     <div
       className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
@@ -65,9 +63,7 @@ exports[`SessionInput should render correctly 1`] = `
       className="MuiFormHelperText-root MuiFormHelperText-contained"
       id="session-code-input-helper-text"
     >
-      <span>
-        Enter 4 characters code
-      </span>
+      Enter 4 characters code.
     </p>
   </div>
 </form>

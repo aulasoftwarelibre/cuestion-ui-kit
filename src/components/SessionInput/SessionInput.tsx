@@ -1,15 +1,18 @@
 import TextField from "@material-ui/core/TextField";
 import * as React from "react";
-import { FormattedMessage } from "react-intl";
+import { InjectedIntl, injectIntl } from "react-intl";
+
 import messages from "../../languages/messages";
 
 interface Props {
   handleSubmit: any;
+  intl: InjectedIntl;
   length?: number;
 }
 
 const SessionInput: React.FunctionComponent<Props> = ({
   handleSubmit,
+  intl,
   length = 4
 }) => {
   const [code, setCode] = React.useState<string>("");
@@ -38,11 +41,11 @@ const SessionInput: React.FunctionComponent<Props> = ({
         id="session-code-input"
         name="code"
         type="text"
-        label={<FormattedMessage {...messages.sessionCode} />}
+        label={intl.formatMessage(messages.sessionCode, {})}
         helperText={
           code.length === length
-            ? <FormattedMessage {...messages.pressEnter} />
-            : <FormattedMessage {...messages.enterLengthCharactersCode} values={{ length }} />
+            ? intl.formatMessage(messages.pressEnter, {})
+            : intl.formatMessage(messages.enterLengthCharactersCode, { length })
         }
         onChange={handleChange()}
         value={code}
@@ -52,4 +55,4 @@ const SessionInput: React.FunctionComponent<Props> = ({
   );
 };
 
-export default SessionInput;
+export default injectIntl(SessionInput);
