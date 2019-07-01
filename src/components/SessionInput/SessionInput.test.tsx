@@ -1,46 +1,62 @@
-import { loadTranslationObject, mountWithIntl } from "enzyme-react-intl";
+import { shallow } from "enzyme";
 import * as React from "react";
+import * as renderer from "react-test-renderer";
 
-import { rendererWithIntl } from "../../helpers/intl-enzyme-test-helper";
-import en from "../../languages/en";
+import messages from "../../languages/en";
 import SessionInput from "./SessionInput";
 
-loadTranslationObject(en);
-
 describe("SessionInput", () => {
-  const mockHandleSubmit = jest.fn();
+  const mockOnHandleSubmit = jest.fn();
 
   it("should render correctly", () => {
-    const component = rendererWithIntl(
-      <SessionInput handleSubmit={mockHandleSubmit} />
+    const component = renderer.create(
+      <SessionInput
+        handleOnSubmit={mockOnHandleSubmit}
+        length={4}
+        messageEnter={messages.pressEnter}
+        messageEnterLengthCharactersCode={messages.enterLengthCharactersCode}
+        messageSessionCode={messages.sessionCode}
+      />
     ).toJSON();
 
     expect(component).toMatchSnapshot();
   });
 
   it("should tell to press ENTER", () => {
-    const wrapper = mountWithIntl(
-      <SessionInput handleSubmit={mockHandleSubmit} />
+    const wrapper = shallow(
+      <SessionInput
+        handleOnSubmit={mockOnHandleSubmit}
+        length={4}
+        messageEnter={messages.pressEnter}
+        messageEnterLengthCharactersCode={messages.enterLengthCharactersCode}
+        messageSessionCode={messages.sessionCode}
+      />
     );
-    wrapper.find("#session-code-input").at(6).simulate("change", {
+    wrapper.find("#session-code-input").simulate("change", {
       target: { name: "session-code-input", value: "1234" }
     });
 
     expect(
-      wrapper.find("#session-code-input").at(1).prop("helperText")
-    ).toStrictEqual("and press ENTER.");
+      wrapper.find("#session-code-input").prop("helperText")
+    ).toStrictEqual(messages.pressEnter);
   });
 
   it("should tell to wait until fill code", () => {
-    const wrapper = mountWithIntl(
-      <SessionInput length={6} handleSubmit={mockHandleSubmit} />
+    const wrapper = shallow(
+      <SessionInput
+        handleOnSubmit={mockOnHandleSubmit}
+        length={6}
+        messageEnter={messages.pressEnter}
+        messageEnterLengthCharactersCode={messages.enterLengthCharactersCode}
+        messageSessionCode={messages.sessionCode}
+      />
     );
-    wrapper.find("#session-code-input").at(6).simulate("change", {
+    wrapper.find("#session-code-input").simulate("change", {
       target: { name: "session-code-input", value: "1234" }
     });
 
     expect(
-      wrapper.find("#session-code-input").at(1).prop("helperText")
-    ).toStrictEqual("Enter 6 characters code.");
+      wrapper.find("#session-code-input").prop("helperText")
+    ).toStrictEqual(messages.enterLengthCharactersCode);
   });
 });
