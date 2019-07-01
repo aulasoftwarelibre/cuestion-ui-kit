@@ -3,14 +3,14 @@ import * as React from "react";
 import * as renderer from "react-test-renderer";
 
 import messages from "../../languages/en";
-import SessionInput from "./SessionInput";
+import SessionInputTextField from "./SessionInputTextField";
 
-describe("SessionInput", () => {
+describe("SessionInputTextField", () => {
   const mockOnHandleSubmit = jest.fn();
 
   it("should render correctly", () => {
     const component = renderer.create(
-      <SessionInput
+      <SessionInputTextField
         handleOnSubmit={mockOnHandleSubmit}
         length={4}
         messageEnter={messages.pressEnter}
@@ -24,7 +24,7 @@ describe("SessionInput", () => {
 
   it("should tell to press ENTER", () => {
     const wrapper = shallow(
-      <SessionInput
+      <SessionInputTextField
         handleOnSubmit={mockOnHandleSubmit}
         length={4}
         messageEnter={messages.pressEnter}
@@ -43,7 +43,7 @@ describe("SessionInput", () => {
 
   it("should tell to wait until fill code", () => {
     const wrapper = shallow(
-      <SessionInput
+      <SessionInputTextField
         handleOnSubmit={mockOnHandleSubmit}
         length={6}
         messageEnter={messages.pressEnter}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SessionInput should render correctly 1`] = `
+exports[`SessionInputTextField should render correctly 1`] = `
 <form
   onSubmit={[Function]}
 >
