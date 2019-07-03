@@ -35,9 +35,10 @@
   },
   "homepage": "https://github.com/aulasoftwarelibre/cuestion-ui-kit#readme",
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "styled-components": "^4.0.2"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-intl": "^2.8.0",
+    "styled-components": "^4.2.0"
   },
   "peerDependencies": {
     "react": "^16.5.2",
@@ -57,8 +58,9 @@
     "@storybook/storybook-deployer": "^2.3.0",
     "@types/enzyme": "^3.9.4",
     "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^23.3.2",
+    "@types/jest": "^24.0.0",
     "@types/react-dom": "^16.0.7",
+    "@types/react-intl": "^2.3.17",
     "@types/react-test-renderer": "^16.0.2",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-info": "^4.1.2",
@@ -72,16 +74,20 @@
     "clsx": "^1.0.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-react-intl": "^2.0.4",
     "husky": "^1.0.0-rc.15",
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.1",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
     "plop": "^2.1.0",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-test-renderer": "^16.5.2",
+    "storybook-addon-intl": "^2.4.1",
     "ts-jest": "^23.10.1",
-    "ts-loader": "^5.1.1",
+    "ts-loader": "^6.0.0",
     "tslint": "^5.11.0",
-    "tslint-react": "^3.6.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.0.3"
   }
 }

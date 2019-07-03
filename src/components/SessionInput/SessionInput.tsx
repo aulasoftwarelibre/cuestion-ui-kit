@@ -1,53 +1,35 @@
-import TextField from "@material-ui/core/TextField";
 import * as React from "react";
+import { InjectedIntl, injectIntl } from "react-intl";
 
-interface Props {
-  handleSubmit: any;
-  length?: number;
+import messages from "../../languages/messages";
+import SessionInputTextField from "./SessionInputTextField";
+
+export interface Props {
+  handleOnSubmit: any;
+  intl: InjectedIntl;
+  length: number;
 }
 
-const SessionInput: React.FunctionComponent<Props> = ({
-  handleSubmit,
-  length = 4
-}) => {
-  const [code, setCode] = React.useState<string>("");
-
-  const handleChange = () => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCode(
-      event.target.value
-        .toUpperCase()
-        .substring(0, length)
-        .replace(/[^A-Z0-9]+/g, "")
-    );
-  };
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const sessionCode: string = e.target[1].value;
-    if (sessionCode.length === length) {
-      handleSubmit(sessionCode);
-      setCode("");
+export const SessionInput = injectIntl(
+  class extends React.Component<Props> {
+    constructor(props: Props) {
+      super(props);
     }
-  };
 
-  return (
-    <form onSubmit={onSubmit}>
-      <TextField
-        id="session-code-input"
-        name="code"
-        type="text"
-        label="Session Code"
-        helperText={
-          code.length === length
-            ? "and press ENTER."
-            : `Enter ${length} characters code.`
-        }
-        onChange={handleChange()}
-        value={code}
-        variant="outlined"
-      />
-    </form>
-  );
-};
+    public render() {
+      const { handleOnSubmit, intl, length } = this.props;
+
+      return (
+        <SessionInputTextField
+          handleOnSubmit={handleOnSubmit}
+          length={length}
+          messageEnter={intl.formatMessage(messages.pressEnter, {})}
+          messageEnterLengthCharactersCode={intl.formatMessage(messages.enterLengthCharactersCode, { length })}
+          messageSessionCode={intl.formatMessage(messages.sessionCode, {})}
+        />
+      );
+    }
+  }
+);
 
 export default SessionInput;
