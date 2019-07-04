@@ -18,8 +18,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "declaration": true,
-    "allowSyntheticDefaultImports": false,
-    "experimentalDecorators": true
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*", ".storybook/**/*"],
   "exclude": [
