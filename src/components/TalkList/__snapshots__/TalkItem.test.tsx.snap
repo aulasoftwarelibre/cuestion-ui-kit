@@ -32,7 +32,7 @@ exports[`TalkItem should render correctly 1`] = `
         >
           <img
             className="MuiAvatar-img"
-            src="https://i.pravatar.cc/150?img=22"
+            src="https://s3.amazonaws.com/uifaces/faces/twitter/jydesign/128.jpg"
           />
         </div>
       </div>
@@ -47,7 +47,7 @@ exports[`TalkItem should render correctly 1`] = `
         <span
           className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
         >
-          John Doe
+          Larue Johnston
         </span>
       </div>
     </div>
