@@ -1,12 +1,19 @@
-import { Avatar, CardHeader, Chip, Collapse, Divider } from "@material-ui/core";
+import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
+import Chip from "@material-ui/core/Chip";
+import Collapse from "@material-ui/core/Collapse";
+import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Alarm, ExpandMore, Room } from "@material-ui/icons";
+import Alarm from "@material-ui/icons/Alarm";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import Room from "@material-ui/icons/Room";
+
 import clsx from "clsx";
 import * as React from "react";
 import { InjectedIntl, injectIntl } from "react-intl";

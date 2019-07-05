@@ -1,8 +1,13 @@
-import { Collapse, IconButton } from "@material-ui/core";
+import Collapse from "@material-ui/core/Collapse";
+import IconButton from "@material-ui/core/IconButton";
+
 import * as React from "react";
 
 import { talk } from "../../models/Talk.mock";
-import { createComponentWithIntl, mountWithIntl } from "../../utils/createComponentWithIntl";
+import {
+  createComponentWithIntl,
+  mountWithIntl
+} from "../../utils/createComponentWithIntl";
 import TalkItem from "./TalkItem";
 
 describe("TalkItem", () => {
@@ -16,7 +21,7 @@ describe("TalkItem", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it ("should not show description by default", () => {
+  it("should not show description by default", () => {
     const component = mountWithIntl(
       <TalkItem handleOnClick={mockHandleOnClick} talk={talk} />
     );
@@ -24,7 +29,7 @@ describe("TalkItem", () => {
     expect(component.find(Collapse).prop("in")).toBeFalsy();
   });
 
-  it ("should show description", () => {
+  it("should show description", () => {
     const component = mountWithIntl(
       <TalkItem handleOnClick={mockHandleOnClick} talk={talk} />
     );
