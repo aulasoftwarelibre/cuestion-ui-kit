@@ -4,6 +4,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import * as React from "react";
 import { FormattedMessage, InjectedIntl, injectIntl } from "react-intl";
 
+import console = require("console");
 import messages from "../../languages/messages";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -75,7 +76,9 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl }
       [event.target.name]: event.target.value
     });
 
-    setEnabled(data.question.length > 10);
+    if (event.target.name === "question") {
+      setEnabled(event.target.value.length >= 10);
+    }
   };
 
   return (
