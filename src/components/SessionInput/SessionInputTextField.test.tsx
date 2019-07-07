@@ -9,15 +9,17 @@ describe("SessionInputTextField", () => {
   const mockOnHandleSubmit = jest.fn();
 
   it("should render correctly", () => {
-    const component = renderer.create(
-      <SessionInputTextField
-        handleOnSubmit={mockOnHandleSubmit}
-        length={4}
-        messageEnter={messages.pressEnter}
-        messageEnterLengthCharactersCode={messages.enterLengthCharactersCode}
-        messageSessionCode={messages.sessionCode}
-      />
-    ).toJSON();
+    const component = renderer
+      .create(
+        <SessionInputTextField
+          handleOnSubmit={mockOnHandleSubmit}
+          length={4}
+          messageEnter={messages.pressEnter}
+          messageEnterLengthCharactersCode={messages.enterLengthCharactersCode}
+          messageSessionCode={messages.sessionCode}
+        />
+      )
+      .toJSON();
 
     expect(component).toMatchSnapshot();
   });
@@ -36,9 +38,7 @@ describe("SessionInputTextField", () => {
       target: { name: "session-code-input", value: "1234" }
     });
 
-    expect(
-      wrapper.find("#session-code-input").prop("helperText")
-    ).toStrictEqual(messages.pressEnter);
+    expect(wrapper.find("#session-code-input").prop("helperText")).toStrictEqual(messages.pressEnter);
   });
 
   it("should tell to wait until fill code", () => {
@@ -55,8 +55,6 @@ describe("SessionInputTextField", () => {
       target: { name: "session-code-input", value: "1234" }
     });
 
-    expect(
-      wrapper.find("#session-code-input").prop("helperText")
-    ).toStrictEqual(messages.enterLengthCharactersCode);
+    expect(wrapper.find("#session-code-input").prop("helperText")).toStrictEqual(messages.enterLengthCharactersCode);
   });
 });
