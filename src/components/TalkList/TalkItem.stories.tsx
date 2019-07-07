@@ -12,10 +12,5 @@ stories.addDecorator(withKnobs);
 
 stories.add(
   "default",
-  wInfo()(() => (
-    <TalkItemWrapper
-      handleOnClick={action("talk-item")}
-      talk={object("Talk", talk)}
-    />
-  ))
+  wInfo()(() => <TalkItemWrapper handleOnClick={action("talk-item")} talk={object("Talk", talk)} />)
 );

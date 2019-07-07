@@ -24,7 +24,9 @@ export const SessionInput = injectIntl(
           handleOnSubmit={handleOnSubmit}
           length={length}
           messageEnter={intl.formatMessage(messages.pressEnter, {})}
-          messageEnterLengthCharactersCode={intl.formatMessage(messages.enterLengthCharactersCode, { length })}
+          messageEnterLengthCharactersCode={intl.formatMessage(messages.enterLengthCharactersCode, {
+            length
+          })}
           messageSessionCode={intl.formatMessage(messages.sessionCode, {})}
         />
       );

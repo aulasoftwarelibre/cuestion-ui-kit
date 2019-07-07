@@ -7,6 +7,10 @@
     "compile": "tsc",
     "test": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "tslint": "tslint './src/**/*.{ts,tsx}'",
+    "tslint:fix": "yarn run tslint --fix",
+    "tslint:check": "tslint-config-prettier-check ./tslint.json",
+    "prettier": "prettier --write --config ./.prettierrc './src/**/*.{ts,tsx}'",
     "generate": "plop --plopfile ./.plop/plop.config.js",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 6006",
@@ -14,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm test"
+      "pre-push": "yarn run lint && yarn test"
     }
   },
   "repository": {
@@ -83,12 +87,15 @@
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
     "plop": "^2.1.0",
+    "prettier": "^1.18.2",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-test-renderer": "^16.5.2",
     "storybook-addon-intl": "^2.4.1",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.0",
-    "tslint": "^5.11.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.0.0",
     "typescript": "^3.0.3"
   }
