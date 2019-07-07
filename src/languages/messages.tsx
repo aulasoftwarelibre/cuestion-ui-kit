@@ -4,6 +4,11 @@ const messages = {
     description: "",
     id: "askQuestion"
   },
+  enterLengthCharacters: {
+    defaultMessage: `Enter {length} characters`,
+    description: "",
+    id: "enterLengthCharacters"
+  },
   enterLengthCharactersCode: {
     defaultMessage: `Enter {length} characters code`,
     description: "",

@@ -9,4 +9,4 @@ import QuestionInput from "./QuestionInput";
 const stories = storiesOf("Components/QuestionInput", module);
 stories.addDecorator(withKnobs);
 
-stories.add("default", wInfo()(() => <QuestionInput handleOnSubmit={action("question")} />));
+stories.add("default", wInfo()(() => <QuestionInput handleOnSubmit={action("question")} length={10} />));
