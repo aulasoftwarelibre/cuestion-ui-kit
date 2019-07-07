@@ -4,7 +4,6 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import * as React from "react";
 import { FormattedMessage, InjectedIntl, injectIntl } from "react-intl";
 
-import console = require("console");
 import messages from "../../languages/messages";
 
 const useStyles = makeStyles((theme: Theme) =>
