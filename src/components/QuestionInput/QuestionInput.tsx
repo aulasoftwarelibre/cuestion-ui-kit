@@ -63,6 +63,8 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl }
       ...data
     });
 
+    setEnabled(false);
+
     setData({
       user: "",
       question: ""
