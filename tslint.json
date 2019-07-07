@@ -11,7 +11,10 @@
     "prettier": [true, ".prettierrc"],
     "no-shadowed-variable": false,
     "interface-name": false,
-    "member-access": [false]
+    "member-access": [false],
+    "variable-name": {
+      "options": ["check-format", "allow-leading-underscore", "allow-pascal-case"]
+    }
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
