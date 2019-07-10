@@ -5,12 +5,12 @@ import * as React from "react";
 
 import { talk } from "../../models/Talk.mock";
 import { wInfo } from "../../utils/wInfo";
-import TalkItemWrapper from "./TalkItem";
+import TalkItem from "./TalkItem";
 
 const stories = storiesOf("Components/TalkItem", module);
 stories.addDecorator(withKnobs);
 
 stories.add(
   "default",
-  wInfo()(() => <TalkItemWrapper handleOnClick={action("talk-item")} talk={object("Talk", talk)} />)
+  wInfo()(() => <TalkItem handleOnClick={action("talk-item")} talk={object("Talk", talk)} />)
 );
