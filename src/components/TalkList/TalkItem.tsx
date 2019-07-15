@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const TalkItemWrapper: React.FunctionComponent<Props> = ({ handleOnClick, intl, talk }) => {
+const _TalkItem: React.FunctionComponent<Props> = ({ handleOnClick, intl, talk }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -98,6 +98,6 @@ const TalkItemWrapper: React.FunctionComponent<Props> = ({ handleOnClick, intl, 
   );
 };
 
-export const TalkItem = injectIntl(TalkItemWrapper);
+export const TalkItem = injectIntl(_TalkItem);
 
 export default TalkItem;
