@@ -10,7 +10,4 @@ import TalkItem from "./TalkItem";
 const stories = storiesOf("Components/TalkItem", module);
 stories.addDecorator(withKnobs);
 
-stories.add(
-  "default",
-  wInfo()(() => <TalkItem handleOnClick={action("talk-item")} talk={object("Talk", talk)} />)
-);
+stories.add("default", wInfo()(() => <TalkItem handleOnClick={action("talk-item")} talk={object("Talk", talk)} />));
