@@ -23,6 +23,7 @@ import { Talk } from "../../models/Talk";
 export interface Props {
   handleOnClick: any;
   intl: InjectedIntl;
+  raised?: boolean;
   talk: Talk;
 }
 
@@ -30,9 +31,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     avatar: {
       backgroundColor: "#60102f"
-    },
-    card: {
-      maxWidth: 345
     },
     chip: {
       marginRight: theme.spacing(0.5)
@@ -53,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const _TalkItem: React.FunctionComponent<Props> = ({ handleOnClick, intl, talk }) => {
+const _TalkItem: React.FunctionComponent<Props> = ({ handleOnClick, intl, raised = false, talk }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -66,7 +64,7 @@ const _TalkItem: React.FunctionComponent<Props> = ({ handleOnClick, intl, talk }
   const topics = talk.topics.map(topic => <Chip key={`${talk.id}-${topic}`} label={topic} className={classes.chip} />);
 
   return (
-    <Card className={classes.card}>
+    <Card raised={raised}>
       <CardActionArea onClick={() => handleOnClick(talk.id)}>
         <CardHeader avatar={<Avatar src={talk.avatar} />} title={talk.title} subheader={talk.speaker} />
         <CardContent>{topics}</CardContent>
