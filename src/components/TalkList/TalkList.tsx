@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
 import Talk from "../../models/Talk";
-import TalkItem from "./TalkItem";
+import TalkItem from "../TalkItem/TalkItem";
 
 export interface Props {
   handleOnClick: any;
