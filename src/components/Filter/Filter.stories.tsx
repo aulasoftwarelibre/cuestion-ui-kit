@@ -1,9 +1,10 @@
 import { action } from "@storybook/addon-actions";
-import { number, withKnobs } from "@storybook/addon-knobs";
+import { object, withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
 import { wInfo } from "../../utils/wInfo";
+import { topics } from "../../models/Topics.mock";
 import Filter from "./Filter";
 
 const stories = storiesOf("Components/Filter", module);
@@ -12,6 +13,9 @@ stories.addDecorator(withKnobs);
 stories.add(
   "default",
   wInfo()(() => (
-    <Filter />
+    <Filter
+      topics={object("Topics", topics)}
+      onChangeHandler={action("topics-selected")}
+    />
   ))
 );

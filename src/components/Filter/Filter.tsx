@@ -2,26 +2,13 @@ import * as React from "react";
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import { InjectedIntl, injectIntl } from "react-intl";
-import DoneIcon from '@material-ui/icons/Done';
+import { Topics } from "../../models/Topics";
 
 export interface Props {
   onChangeHandler: any;
-  topics: any;
+  topics: Topics;
   intl: InjectedIntl;
 }
-
-const topicos = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -36,23 +23,24 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const handleDelete = () => {
-  alert("you've clicked");
-}
-
 const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) => {
   const classes = useStyles();
 
+  const [selected, setSelected] = React.useState<string[]>([]);
+
   return (
     <div className={classes.root}>
-      {topicos.map(topic => (
+      {topics.topics.map(topic => (
         <Chip
+          className={classes.chip}
           label={topic}
-          color="primary" 
-          deleteIcon={<DoneIcon />}
-          onDelete={handleDelete}
+          onClick={() => {
+            selected.push(topic);
+            setSelected(selected);
+            onChangeHandler(selected);
+          }}
         />
-      ))}
+      ))} 
     </div>
   );
 };
