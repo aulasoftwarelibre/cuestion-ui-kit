@@ -1,6 +1,6 @@
 import * as React from "react";
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Chip from '@material-ui/core/Chip';
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import Chip from "@material-ui/core/Chip";
 import { InjectedIntl, injectIntl } from "react-intl";
 import { Topics } from "../../models/Topics";
 
@@ -13,14 +13,14 @@ export interface Props {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      display: 'flex',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap"
     },
     chip: {
-      margin: theme.spacing(1),
-    },
-  }),
+      margin: theme.spacing(1)
+    }
+  })
 );
 
 const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) => {
@@ -40,11 +40,10 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
             onChangeHandler(selected);
           }}
         />
-      ))} 
+      ))}
     </div>
   );
 };
 
 export const Filter = injectIntl(_Filter);
 export default Filter;
-

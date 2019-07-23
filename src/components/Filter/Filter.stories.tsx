@@ -12,10 +12,5 @@ stories.addDecorator(withKnobs);
 
 stories.add(
   "default",
-  wInfo()(() => (
-    <Filter
-      topics={object("Topics", topics)}
-      onChangeHandler={action("topics-selected")}
-    />
-  ))
+  wInfo()(() => <Filter topics={object("Topics", topics)} onChangeHandler={action("topics-selected")} />)
 );

@@ -1,5 +1,5 @@
 export interface Topics {
-    topics: string[];
+  topics: string[];
 }
-  
+
 export default Topics;

@@ -6,8 +6,4 @@ function createTopics(topics: string[]): Topics {
   };
 }
 
-export const topics: Topics = createTopics([
-  "Agile",
-  "Frontend",
-  "Backend",
-]);
+export const topics: Topics = createTopics(["Agile", "Frontend", "Backend"]);
