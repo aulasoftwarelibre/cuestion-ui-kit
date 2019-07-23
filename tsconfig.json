@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build/lib",
-    "module": "es2015",
+    "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
@@ -20,8 +20,11 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true
   },
+  "declaration": true,
   "include": ["src/**/*", ".storybook/**/*"],
   "exclude": [
     "node_modules",
