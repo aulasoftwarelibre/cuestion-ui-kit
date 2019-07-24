@@ -41,8 +41,7 @@ interface Props {
 }
 
 const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question }) => {
-  const [count, setCount] = React.useState<number>(question.votes);
-  const [pressed, setPressed] = React.useState<boolean>(question.isVoted);
+  const [pressed, setPressed] = React.useState<boolean>(!question.isVoted);
 
   const classes = useStyles();
 
@@ -53,12 +52,10 @@ const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question
     question.isVoted = pressed;
 
     if (question.isVoted) {
-        setCount(count + 1);
+      question.votes = question.votes + 1;
     } else {
-        setCount(count - 1);
+      question.votes = question.votes - 1;
     }
-
-      question.votes = count;
   };
 
   return (
