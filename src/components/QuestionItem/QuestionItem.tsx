@@ -41,20 +41,24 @@ interface Props {
 }
 
 const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question }) => {
-  const [pressed, setPressed] = React.useState<boolean>(false);
+  const [count, setCount] = React.useState<number>(question.votes);
+  const [pressed, setPressed] = React.useState<boolean>(question.isVoted);
 
   const classes = useStyles();
 
   const handleLikeButton = () => {
     handleOnClick(question.id);
-    setPressed(!pressed);
-    question.isVoted = !pressed;
 
-    if (pressed) {
-      question.votes = question.votes + 1;
+    setPressed(!pressed);
+    question.isVoted = pressed;
+
+    if (question.isVoted) {
+        setCount(count + 1);
     } else {
-      question.votes = question.votes - 1;
+        setCount(count - 1);
     }
+
+      question.votes = count;
   };
 
   return (
