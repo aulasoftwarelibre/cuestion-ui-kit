@@ -35,26 +35,27 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
-    onClickHandler: any;
-  // intl: InjectedIntl;
   question: Question;
+  handleOnClick: any;
+  // intl: InjectedIntl;
 }
 
-const _QuestionItem: React.FunctionComponent<Props> = ({ onClickHandler, question }) => {
+const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question }) => {
   const [pressed, setPressed] = React.useState<boolean>(false);
 
-  function handleLikeButton() {
-    onClickHandler(question.id);
+  const classes = useStyles();
+
+  const handleLikeButton = () => {
+    handleOnClick(question.id);
     setPressed(!pressed);
     question.isVoted = !pressed;
-    if (question.isVoted) {
-      question.votes = question.votes - 1;
-    } else {
-      question.votes = question.votes + 1;
-    }
-  }
 
-  const classes = useStyles();
+    if (pressed) {
+      question.votes = question.votes + 1;
+    } else {
+      question.votes = question.votes - 1;
+    }
+  };
 
   return (
     <Card>

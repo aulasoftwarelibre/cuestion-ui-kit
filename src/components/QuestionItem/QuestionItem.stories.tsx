@@ -10,4 +10,4 @@ import QuestionItem from "./QuestionItem";
 const stories = storiesOf("Components/QuestionItem", module);
 stories.addDecorator(withKnobs);
 
-stories.add("default", wInfo()(() => <QuestionItem onClickHandler={action("question")} question={object("Question", question)} />));
+stories.add("default", wInfo()(() => <QuestionItem handleOnClick={action("question")} question={object("Question", question)} />));
