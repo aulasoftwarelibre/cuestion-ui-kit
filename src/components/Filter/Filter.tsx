@@ -3,6 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 import { InjectedIntl, injectIntl } from "react-intl";
 import { Topic } from "../../models/Topic";
+import DoneIcon from "@material-ui/icons/Done";
 
 export interface Props {
   onChangeHandler: any;
@@ -28,25 +29,13 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
 
   const [selected, setSelected] = React.useState<Topic[]>([]);
 
-  const selectedTopics: any = {};
-
-  topics.map(topic => {
-    selectedTopics[topic.label] = false;
-  });
-
   const onClickHandler = (topic: Topic) => (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const index = selected.indexOf(topic);
+    const index: number = selected.indexOf(topic);
+    const updatedSelected: Topic[] =
+      index >= 0 ? [...selected.slice(0, index), ...selected.slice(index + 1)] : [...selected, topic];
 
-    if (selectedTopics[topic.label] === true) {
-      selectedTopics[topic.label] = false;
-      selected.splice(index, 1);
-    } else {
-      selectedTopics[topic.label] = true;
-      selected.push(topic);
-    }
-
-    setSelected(selected);
-    onChangeHandler(selected);
+    setSelected(updatedSelected);
+    onChangeHandler(updatedSelected);
   };
 
   return (
@@ -57,9 +46,7 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
           className={classes.chip}
           label={topic.label}
           onClick={onClickHandler(topic)}
-          color={selectedTopics[topic.label] ? "secondary" : "default"}
-          clickable
-          variant={selectedTopics[topic.label] ? "default" : "outlined"}
+          icon={selected.indexOf(topic) !== -1 ? <DoneIcon /> : undefined}
         />
       ))}
     </div>
