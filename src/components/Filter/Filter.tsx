@@ -3,7 +3,6 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 import { InjectedIntl, injectIntl } from "react-intl";
 import { Topic } from "../../models/Topic";
-import console = require("console");
 
 export interface Props {
   onChangeHandler: any;
@@ -38,7 +37,7 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
   const onClickHandler = (topic: Topic) => (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const index = selected.indexOf(topic);
 
-    if (selectedTopics[topic.label] == true) {
+    if (selectedTopics[topic.label] === true) {
       selectedTopics[topic.label] = false;
       selected.splice(index, 1);
     } else {
@@ -48,7 +47,7 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
 
     setSelected(selected);
     onChangeHandler(selected);
-  }
+  };
 
   return (
     <div className={classes.root}>
