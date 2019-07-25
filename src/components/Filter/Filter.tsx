@@ -2,11 +2,12 @@ import * as React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 import { InjectedIntl, injectIntl } from "react-intl";
-import { Topics } from "../../models/Topics";
+import { Topic } from "../../models/Topic";
+import console = require("console");
 
 export interface Props {
   onChangeHandler: any;
-  topics: Topics;
+  topics: Topic[];
   intl: InjectedIntl;
 }
 
@@ -26,19 +27,40 @@ const useStyles = makeStyles((theme: Theme) =>
 const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) => {
   const classes = useStyles();
 
-  const [selected, setSelected] = React.useState<string[]>([]);
+  const [selected, setSelected] = React.useState<Topic[]>([]);
+
+  const selectedTopics: any = {};
+
+  topics.map(topic => {
+    selectedTopics[topic.label] = false;
+  });
+
+  const onClickHandler = (topic: Topic) => (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const index = selected.indexOf(topic);
+
+    if (selectedTopics[topic.label] == true) {
+      selectedTopics[topic.label] = false;
+      selected.splice(index, 1);
+    } else {
+      selectedTopics[topic.label] = true;
+      selected.push(topic);
+    }
+
+    setSelected(selected);
+    onChangeHandler(selected);
+  }
 
   return (
     <div className={classes.root}>
-      {topics.topics.map(topic => (
+      {topics.map(topic => (
         <Chip
+          key={topic.label}
           className={classes.chip}
-          label={topic}
-          onClick={() => {
-            selected.push(topic);
-            setSelected(selected);
-            onChangeHandler(selected);
-          }}
+          label={topic.label}
+          onClick={onClickHandler(topic)}
+          color={selectedTopics[topic.label] ? "secondary" : "default"}
+          clickable
+          variant={selectedTopics[topic.label] ? "default" : "outlined"}
         />
       ))}
     </div>

@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
 import { wInfo } from "../../utils/wInfo";
-import { topics } from "../../models/Topics.mock";
+import { topics } from "../../models/Topic.mock";
 import Filter from "./Filter";
 
 const stories = storiesOf("Components/Filter", module);
