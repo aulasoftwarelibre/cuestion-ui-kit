@@ -46,7 +46,7 @@ const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) =>
           className={classes.chip}
           label={topic.label}
           onClick={onClickHandler(topic)}
-          icon={selected.indexOf(topic) !== -1 ? <DoneIcon /> : undefined}
+          icon={selected.indexOf(topic) >= 0 ? <DoneIcon /> : undefined}
         />
       ))}
     </div>
