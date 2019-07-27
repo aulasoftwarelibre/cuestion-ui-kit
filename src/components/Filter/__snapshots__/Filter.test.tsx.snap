@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter should render correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiChip-root makeStyles-chip-2 MuiChip-clickable"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="MuiChip-label"
+    >
+      Agile
+    </span>
+  </div>
+  <div
+    className="MuiChip-root makeStyles-chip-2 MuiChip-clickable"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="MuiChip-label"
+    >
+      Backend
+    </span>
+  </div>
+  <div
+    className="MuiChip-root makeStyles-chip-2 MuiChip-clickable"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="MuiChip-label"
+    >
+      Frontend
+    </span>
+  </div>
+</div>
+`;
