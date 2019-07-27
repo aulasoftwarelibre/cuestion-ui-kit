@@ -2,6 +2,7 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, IconButton, Typogra
 import { red } from "@material-ui/core/colors";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteBorder";
 
 import * as React from "react";
 import { InjectedIntl, injectIntl } from "react-intl";
@@ -61,7 +62,7 @@ const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="Like button" onClick={() => handleOnClick(question.id, !question.isVoted)}>
-          <FavoriteIcon />
+          {question.isVoted ? <FavoriteIcon/> : <FavoriteOutlinedIcon/>}
         </IconButton>
         <Typography variant="h6" color="primary" component="p">
           {question.votes}
