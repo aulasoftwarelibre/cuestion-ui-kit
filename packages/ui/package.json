@@ -1,6 +1,6 @@
 {
-  "name": "aulasoftwarelibre-cuestion-ui-kit",
-  "version": "1.0.0",
+  "name": "@cuestion/ui",
+  "version": "0.1.0",
   "description": "Cuestion UI Kit",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
