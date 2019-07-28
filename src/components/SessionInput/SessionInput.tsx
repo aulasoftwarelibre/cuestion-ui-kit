@@ -25,9 +25,8 @@ const _SessionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, l
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const sessionCode: string = e.target[1].value;
-    if (sessionCode.length === length) {
-      handleOnSubmit(sessionCode);
+    if (code.length === length) {
+      handleOnSubmit(code);
       setCode("");
     }
   };
