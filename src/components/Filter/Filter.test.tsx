@@ -50,7 +50,7 @@ describe("Filter", () => {
       .first()
       .simulate("click");
 
-    expect(mockOnHandleClick).toBeCalledWith(expect.arrayContaining([topics[0]]));
+    expect(mockOnHandleClick).toBeCalledWith([topics[0]]);
   });
 
   it("should return an array without the topic deselected", () => {
@@ -65,6 +65,6 @@ describe("Filter", () => {
       .first()
       .simulate("click");
 
-    expect(mockOnHandleClick).toBeCalledWith(expect.not.arrayContaining([topics[0]]));
+    expect(mockOnHandleClick).lastCalledWith([]);
   });
 });
