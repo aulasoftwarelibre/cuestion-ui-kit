@@ -3,8 +3,7 @@ import { object, withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
-import { question } from "../../models/Question.mock";
-import { question2 } from "../../models/Question.mock";
+import { question, question2 } from "../../models/Question.mock";
 
 import { wInfo } from "../../utils/wInfo";
 import QuestionItem from "./QuestionItem";
