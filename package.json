@@ -1,0 +1,28 @@
+{
+  "name": "cuestion",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "husky": "^3.0.1",
+    "lerna": "^3.16.4",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run tslint && yarn test"
+    }
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "prettier": "prettier --write --config ./.prettierrc 'packages/*/src/**/*.{ts,tsx}'",
+    "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",
+    "tslint:fix": "yarn run tslint --fix",
+    "storybook": "yarn workspace @cuestion/ui storybook"
+  }
+}
