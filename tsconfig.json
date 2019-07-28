@@ -8,8 +8,6 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", ".storybook"],
-    "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -22,17 +20,16 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules", "packages"]
+    }
   },
   "declaration": true,
-  "include": ["src/**/*", ".storybook/**/*"],
+  "include": ["packages"],
   "exclude": [
     "node_modules",
-    "build",
-    "scripts",
-    ".storybook",
-    "src/internal",
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx"
   ]
 }
