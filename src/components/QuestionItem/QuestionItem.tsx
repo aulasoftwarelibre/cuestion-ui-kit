@@ -62,7 +62,7 @@ const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="Like button" onClick={() => handleOnClick(question.id, !question.isVoted)}>
-          {question.isVoted ? <FavoriteIcon/> : <FavoriteOutlinedIcon/>}
+          {question.isVoted ? <FavoriteIcon /> : <FavoriteOutlinedIcon />}
         </IconButton>
         <Typography variant="h6" color="primary" component="p">
           {question.votes}
