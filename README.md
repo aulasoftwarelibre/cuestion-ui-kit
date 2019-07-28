@@ -2,11 +2,11 @@
   <br>
   <img src="docs/cuestion-logo.png" alt="Cuestion Logo" width="400"></a>
   <br>
-  Cuestion UI Kit
+  Cuestion UI
   <br>
 </h1>
 
-<h4 align="center">A UI Kit for <a href="https://github.com/aulasoftwarelibre/cuestion-client">Cuestion Client project.</a></h4>
+<h4 align="center">Cuention UI for the <a href="https://github.com/aulasoftwarelibre/cuestion">Cuestion project.</a></h4>
 
 
 <div align="center">
