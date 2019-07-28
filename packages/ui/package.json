@@ -12,7 +12,6 @@
     "tslint:fix": "yarn run tslint --fix",
     "tslint:check": "tslint-config-prettier-check ./tslint.json",
     "prettier": "prettier --write --config ./.prettierrc './src/**/*.{ts,tsx}'",
-    "generate": "plop --plopfile ./.plop/plop.config.js",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -88,7 +87,6 @@
     "jest-styled-components": "^6.2.1",
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
-    "plop": "^2.1.0",
     "prettier": "^1.18.2",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-test-renderer": "^16.5.2",
