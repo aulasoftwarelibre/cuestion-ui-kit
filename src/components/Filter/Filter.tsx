@@ -1,9 +1,11 @@
 import * as React from "react";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+
 import Chip from "@material-ui/core/Chip";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import DoneIcon from "@material-ui/icons/Done";
+
 import { InjectedIntl, injectIntl } from "react-intl";
 import { Topic } from "../../models/Topic";
-import DoneIcon from "@material-ui/icons/Done";
 
 export interface Props {
   onChangeHandler: any;
