@@ -20,7 +20,7 @@ exports[`SessionInput should render correctly 1`] = `
     >
       <fieldset
         aria-hidden={true}
-        className="PrivateNotchedOutline-root-57 MuiOutlinedInput-notchedOutline"
+        className="PrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline"
         style={
           Object {
             "paddingLeft": 8,
@@ -28,7 +28,7 @@ exports[`SessionInput should render correctly 1`] = `
         }
       >
         <legend
-          className="PrivateNotchedOutline-legend-58"
+          className="PrivateNotchedOutline-legend-59"
           style={
             Object {
               "width": 0.01,

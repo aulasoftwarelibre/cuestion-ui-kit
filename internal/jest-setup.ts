@@ -11,4 +11,4 @@ const global: any = {};
 
 const doc = new JSDOM("<!doctype html><html><body></body></html>");
 global.document = doc;
-global.window = doc.defaultView;
+global.window = global.document.defaultView;
