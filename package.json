@@ -6,6 +6,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@types/jest": "^24.0.15",
+    "@types/jsdom": "^12.2.4",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
     "@types/react-intl": "^2.3.18",
@@ -39,6 +40,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
+    "build": "lerna run build",
     "prettier": "prettier --write --config ./.prettierrc 'packages/*/src/**/*.{ts,tsx}'",
     "test": "jest",
     "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",

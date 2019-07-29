@@ -5,7 +5,7 @@ module.exports = {
   globals: { "ts-jest": { diagnostics: { ignoreCodes: [151001] } } },
   globalSetup: "./internal/global-setup.js",
   roots: ["<rootDir>packages"],
-  testMatch: ["**/__tests__/*.+(ts|tsx|js)", "**/*.test.+(ts|tsx|js)"],
+  testMatch: ["**/__tests__/**/.+(ts|tsx|js)", "**/src/**/*.test.+(ts|tsx|js)"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest"
   }

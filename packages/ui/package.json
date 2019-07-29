@@ -2,10 +2,16 @@
   "name": "@cuestion/ui",
   "version": "0.1.0",
   "description": "Cuestion UI Kit",
-  "main": "build/lib/index.js",
-  "types": "build/lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "compile": "tsc",
+    "build": "tsc",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
