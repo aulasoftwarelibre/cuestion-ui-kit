@@ -13,3 +13,26 @@
 
 ![](https://img.shields.io/badge/contains-technical%20debt-green.svg?style=for-the-badge) ![](https://img.shields.io/badge/built%20with-swag-orange.svg?style=for-the-badge) ![](https://img.shields.io/badge/it%20is%20time%20for%20a-chupito-red.svg?style=for-the-badge)
 </div>
+
+## Installation
+
+Install dependencies
+
+    yarn install
+
+Before use the `@cuestion/ui` component, we need to build it
+
+    yarn build
+
+## Working in UI
+
+Execute storybook:
+
+    yarn storybook
+
+## Working in web client
+
+Execute next.js
+
+    yarn dev
+

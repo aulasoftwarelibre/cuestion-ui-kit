@@ -41,7 +41,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
-    "prettier": "prettier --write --config ./.prettierrc 'packages/*/src/**/*.{ts,tsx}'",
+    "dev": "yarn workspace @cuestion/web dev",
+    "prettier": "prettier --write --config ./.prettierrc 'packages/ui/src/**/*.ts{,x}' 'packages/web/{components,lib,pages}/**/*.ts{,x}'",
     "test": "jest",
     "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",
     "tslint:fix": "yarn run tslint --fix",
