@@ -9,7 +9,9 @@ describe("QuestionInput", () => {
   const mockOnHandleSubmit = jest.fn();
 
   it("should render correctly", () => {
-    const component = createComponentWithIntl(<QuestionInput handleOnSubmit={mockOnHandleSubmit} length={10} />).toJSON();
+    const component = createComponentWithIntl(
+      <QuestionInput handleOnSubmit={mockOnHandleSubmit} length={10} />
+    ).toJSON();
 
     expect(component).toMatchSnapshot();
   });
@@ -46,8 +48,8 @@ describe("QuestionInput", () => {
     });
 
     button.simulate("click");
-    
-    expect(mockOnHandleSubmit).toBeCalledWith({question: "abcdefghij", user: ""});
+
+    expect(mockOnHandleSubmit).toBeCalledWith({ question: "abcdefghij", user: "" });
   });
 
   it("should return a Question with an user defined", () => {
@@ -60,11 +62,11 @@ describe("QuestionInput", () => {
     });
 
     input.simulate("change", {
-        target: {name: "user", value: "user123"}
-    })
+      target: { name: "user", value: "user123" }
+    });
 
     button.simulate("click");
-    
-    expect(mockOnHandleSubmit).toBeCalledWith({question: "abcdefghij", user: "user123"});
+
+    expect(mockOnHandleSubmit).toBeCalledWith({ question: "abcdefghij", user: "user123" });
   });
 });
