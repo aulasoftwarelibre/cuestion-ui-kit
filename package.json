@@ -16,6 +16,7 @@
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
     "lerna": "^3.16.4",
+    "lint": "^0.7.0",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
