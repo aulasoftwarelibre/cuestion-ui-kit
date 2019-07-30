@@ -36,9 +36,15 @@ export const question: Question = createQuestion(
 
 export const question2: Question = createQuestion(
   "2",
-  "¿Cuantos años tienes?",
+  "¿Cuantos años tienes erfjvbdsnklfjrhfvbdjkl whfuefieybcfbie foregyur igerpgucer greugielfksfwrgierg  ugerig er?",
   new Date("2019/09/13 09:30:00 GMT"),
   "Miguel Angel",
   10,
   true
 );
+
+export const questions: Question[] = [
+  question,
+  question2,
+  createQuestion("3", "¿Dónde trabajas?", new Date("2019/09/13 09:30:00 GMT"), "Francisco", 5, true)
+];
