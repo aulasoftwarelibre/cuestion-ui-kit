@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import * as React from "react";
 import { InjectedIntl, injectIntl } from "react-intl";
 
-import messages from "../../languages/messages";
+import { messages } from "@cuestion/common";
 
 interface Props {
   handleOnSubmit: any;

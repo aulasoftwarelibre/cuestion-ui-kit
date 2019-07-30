@@ -46,6 +46,7 @@
     "test": "jest",
     "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",
     "tslint:fix": "yarn run tslint --fix",
+    "start": "yarn workspace @cuestion/web start",
     "storybook": "yarn workspace @cuestion/ui storybook",
     "storybook-deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
   }
