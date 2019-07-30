@@ -40,12 +40,13 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna run build",
+    "build": "lerna run --parallel build",
     "dev": "yarn workspace @cuestion/web dev",
     "prettier": "prettier --write --config ./.prettierrc 'packages/ui/src/**/*.ts{,x}' 'packages/web/{components,lib,pages}/**/*.ts{,x}'",
     "test": "jest",
     "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",
     "tslint:fix": "yarn run tslint --fix",
+    "start": "yarn workspace @cuestion/web start",
     "storybook": "yarn workspace @cuestion/ui storybook",
     "storybook-deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
   }
