@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
-import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Talk from "../../models/Talk";
 import TalkItem from "../TalkItem/TalkItem";
 
@@ -16,12 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      overflow: 'hidden',
+      overflow: "hidden",
       padding: theme.spacing(0, 1)
     },
     grid: {
-      padding: theme.spacing(2),
-    },
+      padding: theme.spacing(2)
+    }
   })
 );
 
