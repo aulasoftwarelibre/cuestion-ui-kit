@@ -2,7 +2,7 @@
 
 exports[`SessionInput should render liked question snapshot 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 MuiPaper-rounded"
 >
   <div
     className="MuiCardHeader-root"
@@ -38,7 +38,7 @@ exports[`SessionInput should render liked question snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
     >
-      ¿Cuantos años tienes?
+      ¿Cuantos años tienes erfjvbdsnklfjrhfvbdjkl whfuefieybcfbie foregyur igerpgucer greugielfksfwrgierg  ugerig er?
     </p>
   </div>
   <div
@@ -90,7 +90,7 @@ exports[`SessionInput should render liked question snapshot 1`] = `
 
 exports[`SessionInput should render not liked question snapshot 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-1 MuiPaper-rounded"
 >
   <div
     className="MuiCardHeader-root"
