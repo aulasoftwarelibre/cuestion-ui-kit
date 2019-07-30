@@ -4,10 +4,10 @@ import { addDecorator, configure } from "@storybook/react";
 import { setIntlConfig, withIntl } from "storybook-addon-intl";
 
 // Load the locale data for all your defined locales
+import { languages } from "@cuestion/common";
 import { addLocaleData } from "react-intl";
 import en from "react-intl/locale-data/en";
 import es from "react-intl/locale-data/es";
-import languages from "../src/languages";
 
 addLocaleData(en);
 addLocaleData(es);
