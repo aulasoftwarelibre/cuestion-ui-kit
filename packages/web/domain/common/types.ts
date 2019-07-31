@@ -1,5 +1,5 @@
 export interface Session {
-  id: number;
+  id: string;
   code: string;
   title: string;
 }
