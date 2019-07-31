@@ -12,6 +12,7 @@
     "@cuestion/ui": "^0.1.0",
     "@material-ui/core": "^4.1.3",
     "@material-ui/icons": "^4.2.1",
+    "@types/react-redux": "^7.1.1",
     "intl": "^1.2.5",
     "next": "^9.0.2",
     "next-seo": "^2.0.0",
@@ -19,6 +20,9 @@
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
     "react-particles-js": "^2.7.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
