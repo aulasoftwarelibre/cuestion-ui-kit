@@ -3,7 +3,10 @@ import { OPEN_SESSION_SUCCESS, SessionActionTypes, SessionState } from "./types"
 
 const initialState: SessionState = {};
 
-const reducer: Reducer<SessionState> = (state: SessionState = initialState, action: SessionActionTypes): SessionState => {
+const reducer: Reducer<SessionState, SessionActionTypes> = (
+  state: SessionState = initialState,
+  action: SessionActionTypes
+): SessionState => {
   switch (action.type) {
     case OPEN_SESSION_SUCCESS:
       return {

@@ -1,4 +1,3 @@
-import { action } from "typesafe-actions";
 import { Session } from "../common/types";
 import {
   OPEN_SESSION_FAILURE,
