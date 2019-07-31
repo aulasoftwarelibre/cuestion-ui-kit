@@ -1,30 +1,22 @@
-import {
-  OPEN_SESSION_FAILURE,
-  OPEN_SESSION_REQUEST,
-  OPEN_SESSION_SUCCESS,
-  SessionActionTypes,
-  SessionState
-} from "./types";
+import { AnyAction, Reducer } from "redux";
+import { Session } from "../common/types";
+import { OPEN_SESSION_SUCCESS, SessionCode } from "./types";
 
-const initialState: SessionState = {
-  error: false
-};
+const initialState: State = {};
 
-export function sessionReducer(state = initialState, action: SessionActionTypes): SessionState {
+export const reducer: Reducer<State> = (state: State = initialState, action: AnyAction): State => {
   switch (action.type) {
-    case OPEN_SESSION_REQUEST:
-      return {
-        ...action.payload,
-        error: false
-      };
-    case OPEN_SESSION_FAILURE:
-      return {
-        ...action.payload,
-        error: true
-      };
     case OPEN_SESSION_SUCCESS:
-    // no break
+      return {
+        ...state,
+        session: action.payload.session
+      };
     default:
       return state;
   }
+};
+
+export interface State {
+  readonly sessionCode?: SessionCode;
+  readonly session?: Session;
 }

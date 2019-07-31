@@ -1,6 +1,6 @@
+import { action } from "typesafe-actions";
 import { Session } from "../common/types";
 import {
-  ErrorMessage,
   OPEN_SESSION_FAILURE,
   OPEN_SESSION_REQUEST,
   OPEN_SESSION_SUCCESS,
@@ -8,23 +8,22 @@ import {
   SessionCode
 } from "./types";
 
-export function openSessionRequest(sessionCode: SessionCode): SessionActionTypes {
-  return {
-    type: OPEN_SESSION_REQUEST,
-    payload: sessionCode
-  };
-}
+export const openSessionRequest = (sessionCode: SessionCode): SessionActionTypes => ({
+  type: OPEN_SESSION_REQUEST,
+  payload: {
+    sessionCode
+  }
+});
 
-export function openSessionSuccess(session: Session): SessionActionTypes {
-  return {
-    type: OPEN_SESSION_SUCCESS,
-    payload: session
-  };
-}
+export const openSessionSuccess = (session: Session): SessionActionTypes => ({
+  type: OPEN_SESSION_SUCCESS,
+  payload: {
+    session
+  }
+});
 
-export function openSessionFailure(errorMessage: ErrorMessage): SessionActionTypes {
-  return {
-    type: OPEN_SESSION_FAILURE,
-    payload: errorMessage
-  };
-}
+export const openSessionFailure = (errorMessage: Error): SessionActionTypes => ({
+  type: OPEN_SESSION_FAILURE,
+  payload: errorMessage,
+  error: true
+});
