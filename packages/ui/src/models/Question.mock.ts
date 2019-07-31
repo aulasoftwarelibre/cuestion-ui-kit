@@ -4,7 +4,6 @@ import Question from "./Question";
 
 function createQuestion(
   id: string,
-  question: string,
   createdAt: Date,
   username: string,
   votes: number,
@@ -17,7 +16,7 @@ function createQuestion(
 
   return {
     id,
-    question,
+    question: faker.lorem.sentences(),
     createdAt,
     username,
     votes,
@@ -27,7 +26,6 @@ function createQuestion(
 
 export const question: Question = createQuestion(
   "1",
-  "¿Como te llamas?",
   new Date("2019/09/13 09:30:00 GMT"),
   "Javier Velasco",
   0,
@@ -36,7 +34,6 @@ export const question: Question = createQuestion(
 
 export const question2: Question = createQuestion(
   "2",
-  "¿Cuantos años tienes erfjvbdsnklfjrhfvbdjkl whfuefieybcfbie foregyur igerpgucer greugielfksfwrgierg  ugerig er?",
   new Date("2019/09/13 09:30:00 GMT"),
   "Miguel Angel",
   10,
@@ -46,5 +43,5 @@ export const question2: Question = createQuestion(
 export const questions: Question[] = [
   question,
   question2,
-  createQuestion("3", "¿Dónde trabajas?", new Date("2019/09/13 09:30:00 GMT"), "Francisco", 5, true)
+  createQuestion("3", new Date("2019/09/13 09:30:00 GMT"), "Francisco", 5, true)
 ];
