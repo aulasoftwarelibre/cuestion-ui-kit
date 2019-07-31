@@ -4,8 +4,6 @@ import Particles from "react-particles-js";
 import styled from "styled-components";
 
 function Home() {
-  const handler = id => console.log("event", id);
-
   return (
     <>
       <NextSeo
@@ -18,7 +16,11 @@ function Home() {
           title: "Cuestion",
           description:
             "Question platform for the SalmorejoTech conference. Send your question or vote the ones that you find most interesting and we will make them for you to the speakers.",
-          images: [{ url: "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png" }],
+          images: [
+            {
+              url: "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png"
+            }
+          ],
           site_name: "Cuestion - SalmorejoTech"
         }}
         twitter={{
@@ -28,7 +30,7 @@ function Home() {
       />
       <Body>
         <Logo src="/static/img/cuestion-logo.svg" />
-        <SessionInput length={4} handleOnSubmit={handler} />
+        <SessionInput length={4} handleOnSubmit={() => true} />
       </Body>
       <Background
         params={{
