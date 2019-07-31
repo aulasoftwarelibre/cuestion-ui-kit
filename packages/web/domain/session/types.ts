@@ -13,6 +13,12 @@ export interface ErrorMessage {
   timestamp: number;
 }
 
+export interface SessionState {
+  sessionCode?: SessionCode;
+  error: boolean;
+  errorMessage?: ErrorMessage;
+}
+
 interface OpenSessionRequestAction {
   type: typeof OPEN_SESSION_REQUEST;
   payload: SessionCode;

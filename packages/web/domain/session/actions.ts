@@ -8,10 +8,10 @@ import {
   SessionCode
 } from "./types";
 
-export function openSessionRequest(code: SessionCode): SessionActionTypes {
+export function openSessionRequest(sessionCode: SessionCode): SessionActionTypes {
   return {
     type: OPEN_SESSION_REQUEST,
-    payload: code
+    payload: sessionCode
   };
 }
 
@@ -22,9 +22,9 @@ export function openSessionSuccess(session: Session): SessionActionTypes {
   };
 }
 
-export function openSessionFailure(error: ErrorMessage): SessionActionTypes {
+export function openSessionFailure(errorMessage: ErrorMessage): SessionActionTypes {
   return {
     type: OPEN_SESSION_FAILURE,
-    payload: error
+    payload: errorMessage
   };
 }
