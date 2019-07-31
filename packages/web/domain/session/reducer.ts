@@ -1,10 +1,9 @@
-import { AnyAction, Reducer } from "redux";
-import { Session } from "../common/types";
-import { OPEN_SESSION_SUCCESS, SessionCode } from "./types";
+import { Reducer } from "redux";
+import { OPEN_SESSION_SUCCESS, SessionActionTypes, SessionState } from "./types";
 
-const initialState: State = {};
+const initialState: SessionState = {};
 
-export const reducer: Reducer<State> = (state: State = initialState, action: AnyAction): State => {
+const reducer: Reducer<SessionState> = (state: SessionState = initialState, action: SessionActionTypes): SessionState => {
   switch (action.type) {
     case OPEN_SESSION_SUCCESS:
       return {
@@ -16,7 +15,4 @@ export const reducer: Reducer<State> = (state: State = initialState, action: Any
   }
 };
 
-export interface State {
-  readonly sessionCode?: SessionCode;
-  readonly session?: Session;
-}
+export { reducer as sessionReducer };

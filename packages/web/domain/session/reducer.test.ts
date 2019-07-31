@@ -1,6 +1,6 @@
 import { Session } from "../common/types";
 import { openSessionSuccess } from "./actions";
-import { reducer } from "./reducer";
+import { sessionReducer as reducer } from "./reducer";
 import * as types from "./types";
 
 describe("session reducer", () => {
