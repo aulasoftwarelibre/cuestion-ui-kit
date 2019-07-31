@@ -29,14 +29,14 @@ export const TalkList: React.FunctionComponent<Props> = ({ handleOnClick, filter
   const classes = useStyles();
 
   const list = talks.map(talk => (
-    <Grid item xs={12} justify="flex-start" md={4} key={talk.id} className={classes.grid}>
+    <Grid item xs={12} md={4} key={talk.id} className={classes.grid}>
       <TalkItem handleOnClick={handleOnClick} talk={talk} raised={filter.some(r => talk.topics.includes(r))} />
     </Grid>
   ));
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justify="flex-start">
         <Grid item key="title" xs={12}>
           <Typography component="h2" variant="h6" color="primary">
             {title}
