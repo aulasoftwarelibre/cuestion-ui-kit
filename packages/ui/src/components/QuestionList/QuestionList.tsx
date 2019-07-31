@@ -34,14 +34,14 @@ export const QuestionList: React.FunctionComponent<Props> = ({ handleOnClick, qu
   questions.sort(sortByVotes);
 
   const list = questions.map(question => (
-    <Grid item xs={12} key={question.id} className={classes.grid} justify="flex-start">
+    <Grid item xs={12} key={question.id} className={classes.grid}>
       <QuestionItem handleOnClick={handleOnClick} question={question} />
     </Grid>
   ));
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justify="flex-start">
         <Grid item key="title" xs={12} sm={6}>
           <Typography component="h2" variant="h6" color="primary">
             {title}
