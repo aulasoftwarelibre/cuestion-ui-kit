@@ -1,4 +1,4 @@
-import { Session } from "../../common/types";
+import { Session } from "../common/types";
 import {
   ErrorMessage,
   OPEN_SESSION_FAILURE,
@@ -6,7 +6,7 @@ import {
   OPEN_SESSION_SUCCESS,
   SessionActionTypes,
   SessionCode
-} from "../types";
+} from "./types";
 
 export function openSessionRequest(code: SessionCode): SessionActionTypes {
   return {

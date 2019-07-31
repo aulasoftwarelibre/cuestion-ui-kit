@@ -1,4 +1,4 @@
-import { Session } from "../../common/types";
+import { Session } from "../common/types";
 
 export const OPEN_SESSION_REQUEST: string = "@session/OPEN_SESSION_REQUEST";
 export const OPEN_SESSION_SUCCESS: string = "@session/OPEN_SESSION_SUCCESS";
