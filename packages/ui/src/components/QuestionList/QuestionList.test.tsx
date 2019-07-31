@@ -10,15 +10,22 @@ describe("QuestionList", () => {
   const mockOnHandleClick = jest.fn();
 
   it("should render correctly", () => {
-    const component = createComponentWithIntl(<QuestionList handleOnClick={mockOnHandleClick} questions={questions} title={"Question List"} />).toJSON();
+    const component = createComponentWithIntl(
+      <QuestionList handleOnClick={mockOnHandleClick} questions={questions} title={"Question List"} />
+    ).toJSON();
 
     expect(component).toMatchSnapshot();
   });
 
   it("should return message from voted question", () => {
-    const wrapper = mountWithIntl(<QuestionList handleOnClick={mockOnHandleClick} questions={questions} title={"Question List"} />);
+    const wrapper = mountWithIntl(
+      <QuestionList handleOnClick={mockOnHandleClick} questions={questions} title={"Question List"} />
+    );
 
-    wrapper.find(IconButton).first().simulate("click");
+    wrapper
+      .find(IconButton)
+      .first()
+      .simulate("click");
 
     expect(mockOnHandleClick).toBeCalledWith(questions[0].id, !questions[0].isVoted);
   });

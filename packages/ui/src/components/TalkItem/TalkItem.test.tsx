@@ -1,6 +1,6 @@
+import CardActionArea from "@material-ui/core/CardActionArea";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
-import CardActionArea from "@material-ui/core/CardActionArea";
 
 import * as React from "react";
 
