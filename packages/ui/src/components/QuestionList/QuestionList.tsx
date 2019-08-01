@@ -2,13 +2,12 @@ import * as React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import Talk from "../../models/Talk";
-import TalkItem from "../TalkItem/TalkItem";
+import Question from "../../models/Question";
+import QuestionItem from "../QuestionItem/QuestionItem";
 
 export interface Props {
   handleOnClick: any;
-  filter: string[];
-  talks: Talk[];
+  questions: Question[];
   title: string;
 }
 
@@ -25,19 +24,25 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const TalkList: React.FunctionComponent<Props> = ({ handleOnClick, filter, talks, title }) => {
+export const QuestionList: React.FunctionComponent<Props> = ({ handleOnClick, questions, title }) => {
   const classes = useStyles();
 
-  const list = talks.map(talk => (
-    <Grid item xs={12} md={4} key={talk.id} className={classes.grid}>
-      <TalkItem handleOnClick={handleOnClick} talk={talk} raised={filter.some(r => talk.topics.includes(r))} />
+  const sortByVotes = (question1: Question, question2: Question) => {
+    return -1 * (question1.votes - question2.votes);
+  };
+
+  questions.sort(sortByVotes);
+
+  const list = questions.map(question => (
+    <Grid item xs={12} key={question.id} className={classes.grid}>
+      <QuestionItem handleOnClick={handleOnClick} question={question} />
     </Grid>
   ));
 
   return (
     <div className={classes.root}>
       <Grid container spacing={2} justify="flex-start">
-        <Grid item key="title" xs={12}>
+        <Grid item key="title" xs={12} sm={6}>
           <Typography component="h2" variant="h6" color="primary">
             {title}
           </Typography>
@@ -48,4 +53,4 @@ export const TalkList: React.FunctionComponent<Props> = ({ handleOnClick, filter
   );
 };
 
-export default TalkList;
+export default QuestionList;
