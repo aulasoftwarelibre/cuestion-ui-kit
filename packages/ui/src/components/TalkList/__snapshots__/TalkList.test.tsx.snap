@@ -1,0 +1,729 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TalkList should render correctly with filter 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
+      >
+        Talk List
+      </h2>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiCardHeader-root"
+          >
+            <div
+              className="MuiCardHeader-avatar"
+            >
+              <div
+                className="MuiAvatar-root"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="https://s3.amazonaws.com/uifaces/faces/twitter/jydesign/128.jpg"
+                />
+              </div>
+            </div>
+            <div
+              className="MuiCardHeader-content"
+            >
+              <span
+                className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+              >
+                My awesome talk
+              </span>
+              <span
+                className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+              >
+                Larue Johnston
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiCardContent-root"
+          >
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Mobile
+              </span>
+            </div>
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Web
+              </span>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+        <hr
+          className="MuiDivider-root MuiDivider-middle"
+        />
+        <div
+          className="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              Room 1
+            </span>
+          </div>
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              9:30 AM
+            </span>
+          </div>
+          <button
+            aria-expanded={false}
+            aria-label="Show more"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-138"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation8 MuiCard-root MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiCardHeader-root"
+          >
+            <div
+              className="MuiCardHeader-avatar"
+            >
+              <div
+                className="MuiAvatar-root"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="https://s3.amazonaws.com/uifaces/faces/twitter/thibaut_re/128.jpg"
+                />
+              </div>
+            </div>
+            <div
+              className="MuiCardHeader-content"
+            >
+              <span
+                className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+              >
+                My amazing talk
+              </span>
+              <span
+                className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+              >
+                Brian Kuphal
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiCardContent-root"
+          >
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Frontend
+              </span>
+            </div>
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Agile
+              </span>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+        <hr
+          className="MuiDivider-root MuiDivider-middle"
+        />
+        <div
+          className="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              Room 2
+            </span>
+          </div>
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              9:30 AM
+            </span>
+          </div>
+          <button
+            aria-expanded={false}
+            aria-label="Show more"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-138"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TalkList should render correctly without filter 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
+      >
+        Talk List
+      </h2>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiCardHeader-root"
+          >
+            <div
+              className="MuiCardHeader-avatar"
+            >
+              <div
+                className="MuiAvatar-root"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="https://s3.amazonaws.com/uifaces/faces/twitter/jydesign/128.jpg"
+                />
+              </div>
+            </div>
+            <div
+              className="MuiCardHeader-content"
+            >
+              <span
+                className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+              >
+                My awesome talk
+              </span>
+              <span
+                className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+              >
+                Larue Johnston
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiCardContent-root"
+          >
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Mobile
+              </span>
+            </div>
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Web
+              </span>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+        <hr
+          className="MuiDivider-root MuiDivider-middle"
+        />
+        <div
+          className="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              Room 1
+            </span>
+          </div>
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              9:30 AM
+            </span>
+          </div>
+          <button
+            aria-expanded={false}
+            aria-label="Show more"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-138"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            className="MuiCardHeader-root"
+          >
+            <div
+              className="MuiCardHeader-avatar"
+            >
+              <div
+                className="MuiAvatar-root"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="https://s3.amazonaws.com/uifaces/faces/twitter/thibaut_re/128.jpg"
+                />
+              </div>
+            </div>
+            <div
+              className="MuiCardHeader-content"
+            >
+              <span
+                className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+              >
+                My amazing talk
+              </span>
+              <span
+                className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+              >
+                Brian Kuphal
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiCardContent-root"
+          >
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Frontend
+              </span>
+            </div>
+            <div
+              className="MuiChip-root makeStyles-chip-137"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+            >
+              <span
+                className="MuiChip-label"
+              >
+                Agile
+              </span>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+        <hr
+          className="MuiDivider-root MuiDivider-middle"
+        />
+        <div
+          className="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              Room 2
+            </span>
+          </div>
+          <div
+            className="MuiChip-root MuiChip-outlined MuiChip-sizeSmall"
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiChip-icon MuiChip-iconSmall"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+              />
+            </svg>
+            <span
+              className="MuiChip-label MuiChip-labelSmall"
+            >
+              9:30 AM
+            </span>
+          </div>
+          <button
+            aria-expanded={false}
+            aria-label="Show more"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-138"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

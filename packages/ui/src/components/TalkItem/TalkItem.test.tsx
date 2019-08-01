@@ -1,3 +1,4 @@
+import CardActionArea from "@material-ui/core/CardActionArea";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 
@@ -28,5 +29,13 @@ describe("TalkItem", () => {
     component.find(IconButton).simulate("click");
 
     expect(component.find(Collapse).prop("in")).toBeTruthy();
+  });
+
+  it("should return talk id", () => {
+    const component = mountWithIntl(<TalkItem handleOnClick={mockHandleOnClick} talk={talk} />);
+
+    component.find(CardActionArea).simulate("click");
+
+    expect(mockHandleOnClick).toBeCalledWith(talk.id);
   });
 });

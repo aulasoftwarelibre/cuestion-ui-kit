@@ -11,7 +11,7 @@ import { Question } from "../../models/Question";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      width: 100
+      minWidth: 320
     },
     media: {
       height: 0,
@@ -45,7 +45,7 @@ const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question
   const creationHour = intl.formatTime(question.createdAt);
 
   return (
-    <Card>
+    <Card className={classes.card}>
       <CardHeader
         avatar={
           <Avatar aria-label="User avatar" className={classes.avatar}>
