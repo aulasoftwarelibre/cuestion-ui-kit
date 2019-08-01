@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@cuestion/common": "^0.1.0",
     "@cuestion/ui": "^0.1.0",
     "@material-ui/core": "^4.1.3",
     "@material-ui/icons": "^4.2.1",
+    "intl": "^1.2.5",
     "next": "^9.0.2",
     "next-seo": "^2.0.0",
     "react": "^16.8.6",
