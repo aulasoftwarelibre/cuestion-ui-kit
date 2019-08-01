@@ -1,6 +1,7 @@
-import { all, fork, put, takeEvery } from "redux-saga/effects";
+import { all, call, fork, put, takeEvery } from "redux-saga/effects";
 import { OPEN_SESSION_REQUEST, OpenSessionRequestAction } from "./types";
 
+import { searchByCode } from "../../api/session/search-by-code";
 import * as actions from "./actions";
 
 export function* saga() {
@@ -9,7 +10,11 @@ export function* saga() {
 
 export function* handleOpenSessionRequest({ payload: { sessionCode } }: OpenSessionRequestAction) {
   try {
-    throw new Error("Sesión no disponible");
+    const {
+      data: { id, code, title }
+    } = yield call(searchByCode, sessionCode.value);
+
+    yield put(actions.openSessionSuccess({ id, code, title }));
   } catch (errorMessage) {
     yield put(actions.openSessionFailure(errorMessage));
   }
