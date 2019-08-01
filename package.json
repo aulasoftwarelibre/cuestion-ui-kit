@@ -41,6 +41,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
+    "build:common": "lerna run build --scope @cuestion/common",
+    "build:ui": "lerna run build --scope @cuestion/ui",
     "dev": "yarn workspace @cuestion/web dev",
     "prettier": "prettier --write --config ./.prettierrc 'packages/ui/src/**/*.ts{,x}' 'packages/web/{components,lib,pages}/**/*.ts{,x}'",
     "test": "jest",
