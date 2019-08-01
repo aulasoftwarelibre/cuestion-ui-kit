@@ -8,7 +8,9 @@ describe("session reducer", () => {
     // tslint:disable-next-line:no-object-literal-type-assertion
     const action = {} as types.SessionActionTypes;
 
-    expect(reducer(undefined, action)).toEqual({});
+    expect(reducer(undefined, action)).toEqual({
+      error: false
+    });
   });
 
   it("should handle OPEN_SESSION_SUCCESS", () => {
@@ -19,6 +21,7 @@ describe("session reducer", () => {
     };
 
     expect(reducer(undefined, openSessionSuccess(session))).toEqual({
+      error: false,
       session
     });
   });

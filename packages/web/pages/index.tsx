@@ -1,13 +1,15 @@
-import { SessionInput } from "@cuestion/ui";
+import { ErrorMessage, SessionInput } from "@cuestion/ui";
 import { NextSeo } from "next-seo";
 import { useDispatch, useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import { Background } from "../components/Background";
 import * as actions from "../domain/session/actions";
+import { SessionState } from "../domain/session/types";
+import { State } from "../reducer";
 
 function Home() {
+  const session = useSelector<State, SessionState>(store => store.session);
   const dispatch = useDispatch();
 
   return (

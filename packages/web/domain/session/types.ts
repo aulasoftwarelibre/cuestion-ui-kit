@@ -7,6 +7,8 @@ export const OPEN_SESSION_FAILURE = "@@session/OPEN_SESSION_FAILURE";
 export interface SessionState {
   readonly sessionCode?: SessionCode;
   readonly session?: Session;
+  readonly error: boolean;
+  readonly errorMessage?: Error;
 }
 
 export interface SessionCode {

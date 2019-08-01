@@ -1,7 +1,9 @@
 import { Reducer } from "redux";
-import { OPEN_SESSION_SUCCESS, SessionActionTypes, SessionState } from "./types";
+import { OPEN_SESSION_FAILURE, OPEN_SESSION_SUCCESS, SessionActionTypes, SessionState } from "./types";
 
-const initialState: SessionState = {};
+const initialState: SessionState = {
+  error: false
+};
 
 const reducer: Reducer<SessionState, SessionActionTypes> = (
   state: SessionState = initialState,
@@ -11,7 +13,13 @@ const reducer: Reducer<SessionState, SessionActionTypes> = (
     case OPEN_SESSION_SUCCESS:
       return {
         ...state,
+        error: false,
         session: action.payload.session
+      };
+    case OPEN_SESSION_FAILURE:
+      return {
+        error: true,
+        errorMessage: action.payload
       };
     default:
       return state;
