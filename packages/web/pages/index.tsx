@@ -1,9 +1,14 @@
 import { SessionInput } from "@cuestion/ui";
 import { NextSeo } from "next-seo";
 import Particles from "react-particles-js";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
+import * as actions from "../domain/session/actions";
+
 function Home() {
+  const dispatch = useDispatch();
+
   return (
     <>
       <NextSeo
@@ -30,7 +35,7 @@ function Home() {
       />
       <Body>
         <Logo src="/static/img/cuestion-logo.svg" />
-        <SessionInput length={4} handleOnSubmit={() => true} />
+        <SessionInput length={4} handleOnSubmit={(value: string) => dispatch(actions.openSessionRequest({ value }))} />
       </Body>
       <Background
         params={{

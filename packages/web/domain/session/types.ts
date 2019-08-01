@@ -13,7 +13,7 @@ export interface SessionCode {
   value: string;
 }
 
-interface OpenSessionRequestAction {
+export interface OpenSessionRequestAction {
   type: typeof OPEN_SESSION_REQUEST;
   payload: {
     sessionCode: SessionCode;
