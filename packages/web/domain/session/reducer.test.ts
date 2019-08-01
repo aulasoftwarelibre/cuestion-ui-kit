@@ -1,4 +1,3 @@
-import { Session } from "../common/types";
 import { openSessionSuccess } from "./actions";
 import { sessionReducer as reducer } from "./reducer";
 import * as types from "./types";
@@ -14,7 +13,7 @@ describe("session reducer", () => {
   });
 
   it("should handle OPEN_SESSION_SUCCESS", () => {
-    const session: Session = {
+    const session: types.Session = {
       id: "1",
       code: "1234",
       title: "My session"

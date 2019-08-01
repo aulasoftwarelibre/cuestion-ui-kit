@@ -1,8 +1,12 @@
-import { Session } from "../common/types";
-
 export const OPEN_SESSION_REQUEST = "@@session/OPEN_SESSION_REQUEST";
 export const OPEN_SESSION_SUCCESS = "@@session/OPEN_SESSION_SUCCESS";
 export const OPEN_SESSION_FAILURE = "@@session/OPEN_SESSION_FAILURE";
+
+export interface Session {
+  id: string;
+  code: string;
+  title: string;
+}
 
 export interface SessionState {
   readonly sessionCode?: SessionCode;

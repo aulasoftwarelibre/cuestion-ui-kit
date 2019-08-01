@@ -1,4 +1,3 @@
-import { Session } from "../common/types";
 import * as actions from "./actions";
 import * as types from "./types";
 
@@ -20,7 +19,7 @@ describe("actions", () => {
 
 describe("actions", () => {
   it("should create an action to indicate success requesting a session", () => {
-    const session: Session = {
+    const session: types.Session = {
       id: "1",
       code: "1234",
       title: "My session"
