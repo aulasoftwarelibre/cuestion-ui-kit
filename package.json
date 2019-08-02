@@ -42,6 +42,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
+    "build:test": "lerna run build --scope @cuestion/common --scope @cuestion/ui",
     "prebuild:common": "lerna run build --scope @cuestion/ui",
     "build:common": "lerna run build --scope @cuestion/common",
     "build:ui": "lerna run build --scope @cuestion/ui",
