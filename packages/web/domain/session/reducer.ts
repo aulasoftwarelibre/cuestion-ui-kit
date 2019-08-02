@@ -10,12 +10,6 @@ const reducer: Reducer<SessionState, SessionActionTypes> = (
   action: SessionActionTypes
 ): SessionState => {
   switch (action.type) {
-    case OPEN_SESSION_SUCCESS:
-      return {
-        ...state,
-        error: false,
-        session: action.payload.session
-      };
     case OPEN_SESSION_FAILURE:
       return {
         error: true,

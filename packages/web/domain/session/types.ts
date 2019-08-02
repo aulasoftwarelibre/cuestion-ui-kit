@@ -26,14 +26,14 @@ export interface OpenSessionRequestAction {
   };
 }
 
-interface OpenSessionSuccessAction {
+export interface OpenSessionSuccessAction {
   type: typeof OPEN_SESSION_SUCCESS;
   payload: {
     session: Session;
   };
 }
 
-interface OpenSessionFailureAction {
+export interface OpenSessionFailureAction {
   type: typeof OPEN_SESSION_FAILURE;
   payload: Error;
   error: true;

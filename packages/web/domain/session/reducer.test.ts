@@ -11,17 +11,4 @@ describe("session reducer", () => {
       error: false
     });
   });
-
-  it("should handle OPEN_SESSION_SUCCESS", () => {
-    const session: types.Session = {
-      id: "1",
-      code: "1234",
-      title: "My session"
-    };
-
-    expect(reducer(undefined, openSessionSuccess(session))).toEqual({
-      error: false,
-      session
-    });
-  });
 });
