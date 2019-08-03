@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 
 import { Background } from "../components/Background";
-import * as actions from "../domain/session/actions";
-import { SessionState } from "../domain/session/types";
-import { State } from "../reducer";
+import { State } from "../src/reducer";
+import * as actions from "../src/session/actions";
+import { SessionState } from "../src/session/types";
 
 function Home() {
   const session = useSelector<State, SessionState>(store => store.session);
