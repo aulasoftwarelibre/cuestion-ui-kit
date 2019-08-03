@@ -17,20 +17,29 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       overflow: "hidden",
-      padding: theme.spacing(0, 1)
+      padding: theme.spacing(0, 1),
     },
     grid: {
-      padding: theme.spacing(2)
-    }
-  })
+      padding: theme.spacing(2),
+    },
+  }),
 );
 
-export const TalkList: React.FunctionComponent<Props> = ({ handleOnClick, filter, talks, title }) => {
+export const TalkList: React.FunctionComponent<Props> = ({
+  handleOnClick,
+  filter,
+  talks,
+  title,
+}) => {
   const classes = useStyles();
 
   const list = talks.map(talk => (
     <Grid item xs={12} md={4} key={talk.id} className={classes.grid}>
-      <TalkItem handleOnClick={handleOnClick} talk={talk} raised={filter.some(r => talk.topics.includes(r))} />
+      <TalkItem
+        handleOnClick={handleOnClick}
+        talk={talk}
+        raised={filter.some(r => talk.topics.includes(r))}
+      />
     </Grid>
   ));
 

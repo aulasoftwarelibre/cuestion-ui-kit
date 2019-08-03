@@ -3,7 +3,7 @@ import { sessionReducer } from "./session/reducer";
 import { SessionState } from "./session/types";
 
 export const reducer: Reducer<State> = combineReducers({
-  session: sessionReducer
+  session: sessionReducer,
 });
 
 export interface State {

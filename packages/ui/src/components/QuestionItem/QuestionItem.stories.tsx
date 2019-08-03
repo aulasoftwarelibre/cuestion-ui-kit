@@ -14,9 +14,19 @@ stories.addDecorator(withKnobs);
 stories
   .add(
     "Not Liked Question",
-    wInfo()(() => <QuestionItem handleOnClick={action("question")} question={object("Question", question)} />)
+    wInfo()(() => (
+      <QuestionItem
+        handleOnClick={action("question")}
+        question={object("Question", question)}
+      />
+    )),
   )
   .add(
     "Liked Question",
-    wInfo()(() => <QuestionItem handleOnClick={action("question")} question={object("Question", question2)} />)
+    wInfo()(() => (
+      <QuestionItem
+        handleOnClick={action("question")}
+        question={object("Question", question2)}
+      />
+    )),
   );

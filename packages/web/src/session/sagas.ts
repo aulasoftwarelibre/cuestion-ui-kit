@@ -7,7 +7,7 @@ import {
   OPEN_SESSION_REQUEST,
   OPEN_SESSION_SUCCESS,
   OpenSessionRequestAction,
-  OpenSessionSuccessAction
+  OpenSessionSuccessAction,
 } from "./types";
 
 export function* saga() {
@@ -23,10 +23,12 @@ export function* watchOpenSessionSuccess() {
   yield takeEvery(OPEN_SESSION_SUCCESS, handleOpenSessionSuccess);
 }
 
-function* handleOpenSessionRequest({ payload: { sessionCode } }: OpenSessionRequestAction) {
+function* handleOpenSessionRequest({
+  payload: { sessionCode },
+}: OpenSessionRequestAction) {
   try {
     const {
-      data: { id, code, title }
+      data: { id, code, title },
     } = yield call(searchByCode, sessionCode.value);
 
     yield put(openSessionSuccess({ id, code, title }));
@@ -35,7 +37,9 @@ function* handleOpenSessionRequest({ payload: { sessionCode } }: OpenSessionRequ
   }
 }
 
-function* handleOpenSessionSuccess({ payload: { session } }: OpenSessionSuccessAction) {
+function* handleOpenSessionSuccess({
+  payload: { session },
+}: OpenSessionSuccessAction) {
   const ROUTE = (code: string): string => `/sessions/${encodeURI(code)}`;
 
   yield call(Router.push, ROUTE(session.code));

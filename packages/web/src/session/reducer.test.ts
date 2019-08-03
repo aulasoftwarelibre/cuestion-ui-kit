@@ -8,7 +8,7 @@ describe("session reducer", () => {
     const action = {} as types.SessionActionTypes;
 
     expect(reducer(undefined, action)).toEqual({
-      error: false
+      error: false,
     });
   });
 });

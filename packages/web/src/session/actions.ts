@@ -4,25 +4,29 @@ import {
   OPEN_SESSION_SUCCESS,
   Session,
   SessionActionTypes,
-  SessionCode
+  SessionCode,
 } from "./types";
 
-export const openSessionRequest = (sessionCode: SessionCode): SessionActionTypes => ({
+export const openSessionRequest = (
+  sessionCode: SessionCode,
+): SessionActionTypes => ({
   type: OPEN_SESSION_REQUEST,
   payload: {
-    sessionCode
-  }
+    sessionCode,
+  },
 });
 
 export const openSessionSuccess = (session: Session): SessionActionTypes => ({
   type: OPEN_SESSION_SUCCESS,
   payload: {
-    session
-  }
+    session,
+  },
 });
 
-export const openSessionFailure = (errorMessage: Error): SessionActionTypes => ({
+export const openSessionFailure = (
+  errorMessage: Error,
+): SessionActionTypes => ({
   type: OPEN_SESSION_FAILURE,
   payload: errorMessage,
-  error: true
+  error: true,
 });

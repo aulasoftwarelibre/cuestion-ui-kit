@@ -1,4 +1,12 @@
-import { Avatar, Card, CardActions, CardContent, CardHeader, IconButton, Typography } from "@material-ui/core";
+import {
+  Avatar,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import FavoriteIcon from "@material-ui/icons/Favorite";
@@ -11,26 +19,26 @@ import { Question } from "../../models/Question";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      minWidth: 320
+      minWidth: 320,
     },
     media: {
       height: 0,
-      paddingTop: "56.25%" // 16:9
+      paddingTop: "56.25%", // 16:9
     },
     expand: {
       transform: "rotate(0deg)",
       marginLeft: "auto",
       transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest
-      })
+        duration: theme.transitions.duration.shortest,
+      }),
     },
     expandOpen: {
-      transform: "rotate(180deg)"
+      transform: "rotate(180deg)",
     },
     avatar: {
-      backgroundColor: red[500]
-    }
-  })
+      backgroundColor: red[500],
+    },
+  }),
 );
 
 interface Props {
@@ -39,7 +47,11 @@ interface Props {
   intl: InjectedIntl;
 }
 
-const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question, intl }) => {
+const _QuestionItem: React.FunctionComponent<Props> = ({
+  handleOnClick,
+  question,
+  intl,
+}) => {
   const classes = useStyles();
 
   const creationHour = intl.formatTime(question.createdAt);
@@ -61,7 +73,9 @@ const _QuestionItem: React.FunctionComponent<Props> = ({ handleOnClick, question
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="Like button" onClick={() => handleOnClick(question.id, !question.isVoted)}>
+        <IconButton
+          aria-label="Like button"
+          onClick={() => handleOnClick(question.id, !question.isVoted)}>
           {question.isVoted ? <FavoriteIcon /> : <FavoriteOutlinedIcon />}
         </IconButton>
         <Typography variant="h6" color="primary" component="p">

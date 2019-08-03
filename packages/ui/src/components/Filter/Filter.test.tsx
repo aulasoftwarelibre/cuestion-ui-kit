@@ -3,31 +3,40 @@ import Chip from "@material-ui/core/Chip";
 import * as React from "react";
 
 import { topics } from "../../models/Topic.mock";
-import { createComponentWithIntl, mountWithIntl } from "../../utils/createComponentWithIntl";
+import {
+  createComponentWithIntl,
+  mountWithIntl,
+} from "../../utils/createComponentWithIntl";
 import Filter from "./Filter";
 
 describe("Filter", () => {
   const mockOnHandleClick = jest.fn();
 
   it("should render correctly", () => {
-    const component = createComponentWithIntl(<Filter topics={topics} onChangeHandler={mockOnHandleClick} />).toJSON();
+    const component = createComponentWithIntl(
+      <Filter topics={topics} onChangeHandler={mockOnHandleClick} />,
+    ).toJSON();
 
     expect(component).toMatchSnapshot();
   });
 
   it("should appear not selected by default", () => {
-    const wrapper = mountWithIntl(<Filter topics={topics} onChangeHandler={mockOnHandleClick} />);
+    const wrapper = mountWithIntl(
+      <Filter topics={topics} onChangeHandler={mockOnHandleClick} />,
+    );
 
     expect(
       wrapper
         .find(Chip)
         .first()
-        .prop("icon")
+        .prop("icon"),
     ).toBeUndefined();
   });
 
   it("should appear selected", () => {
-    const wrapper = mountWithIntl(<Filter topics={topics} onChangeHandler={mockOnHandleClick} />);
+    const wrapper = mountWithIntl(
+      <Filter topics={topics} onChangeHandler={mockOnHandleClick} />,
+    );
 
     wrapper
       .find(Chip)
@@ -38,12 +47,14 @@ describe("Filter", () => {
       wrapper
         .find(Chip)
         .first()
-        .prop("icon")
+        .prop("icon"),
     ).toBeDefined();
   });
 
   it("should return an array with the topic selected", () => {
-    const wrapper = mountWithIntl(<Filter topics={topics} onChangeHandler={mockOnHandleClick} />);
+    const wrapper = mountWithIntl(
+      <Filter topics={topics} onChangeHandler={mockOnHandleClick} />,
+    );
 
     wrapper
       .find(Chip)
@@ -54,7 +65,9 @@ describe("Filter", () => {
   });
 
   it("should return an array without the topic deselected", () => {
-    const wrapper = mountWithIntl(<Filter topics={topics} onChangeHandler={mockOnHandleClick} />);
+    const wrapper = mountWithIntl(
+      <Filter topics={topics} onChangeHandler={mockOnHandleClick} />,
+    );
 
     wrapper
       .find(Chip)

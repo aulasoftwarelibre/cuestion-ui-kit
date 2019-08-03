@@ -2,38 +2,38 @@ const messages = {
   askQuestion: {
     defaultMessage: "Ask a question",
     description: "",
-    id: "askQuestion"
+    id: "askQuestion",
   },
   enterLengthCharacters: {
     defaultMessage: `Enter {length} characters`,
     description: "",
-    id: "enterLengthCharacters"
+    id: "enterLengthCharacters",
   },
   enterLengthCharactersCode: {
     defaultMessage: `Enter {length} characters code`,
     description: "",
-    id: "enterLengthCharactersCode"
+    id: "enterLengthCharactersCode",
   },
   pressEnter: {
     defaultMessage: "and press ENTER.",
     description: "",
-    id: "pressEnter"
+    id: "pressEnter",
   },
   send: {
     defaultMessage: "Send",
     description: "",
-    id: "send"
+    id: "send",
   },
   sessionCode: {
     defaultMessage: "Session Code",
     description: "",
-    id: "sessionCode"
+    id: "sessionCode",
   },
   yourName: {
     defaultMessage: "Your name (optional)",
     description: "",
-    id: "yourName"
-  }
+    id: "yourName",
+  },
 };
 
 export default messages;

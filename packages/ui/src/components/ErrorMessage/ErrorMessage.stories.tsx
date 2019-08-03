@@ -20,5 +20,5 @@ stories.add(
         onClose={action("error-closed")}
       />
     );
-  })
+  }),
 );

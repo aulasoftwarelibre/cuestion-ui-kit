@@ -18,23 +18,30 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: "flex",
       justifyContent: "center",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
     },
     chip: {
-      margin: theme.spacing(1)
-    }
-  })
+      margin: theme.spacing(1),
+    },
+  }),
 );
 
-const _Filter: React.FunctionComponent<Props> = ({ onChangeHandler, topics }) => {
+const _Filter: React.FunctionComponent<Props> = ({
+  onChangeHandler,
+  topics,
+}) => {
   const classes = useStyles();
 
   const [selected, setSelected] = React.useState<Topic[]>([]);
 
-  const onClickHandler = (topic: Topic) => (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const onClickHandler = (topic: Topic) => (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => {
     const index: number = selected.indexOf(topic);
     const updatedSelected: Topic[] =
-      index >= 0 ? [...selected.slice(0, index), ...selected.slice(index + 1)] : [...selected, topic];
+      index >= 0
+        ? [...selected.slice(0, index), ...selected.slice(index + 1)]
+        : [...selected, topic];
 
     setSelected(updatedSelected);
     onChangeHandler(updatedSelected);

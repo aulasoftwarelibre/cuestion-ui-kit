@@ -16,15 +16,19 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       overflow: "hidden",
-      padding: theme.spacing(0, 1)
+      padding: theme.spacing(0, 1),
     },
     grid: {
-      padding: theme.spacing(2)
-    }
-  })
+      padding: theme.spacing(2),
+    },
+  }),
 );
 
-export const QuestionList: React.FunctionComponent<Props> = ({ handleOnClick, questions, title }) => {
+export const QuestionList: React.FunctionComponent<Props> = ({
+  handleOnClick,
+  questions,
+  title,
+}) => {
   const classes = useStyles();
 
   const sortByVotes = (question1: Question, question2: Question) => {

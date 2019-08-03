@@ -8,7 +8,9 @@ describe("ErrorMessage", () => {
   const mockHandleOnClose = jest.fn();
 
   it("should be closed", () => {
-    const component = mountWithIntl(<ErrorMessage onClose={mockHandleOnClose} error={true} />);
+    const component = mountWithIntl(
+      <ErrorMessage onClose={mockHandleOnClose} error={true} />,
+    );
 
     component.find(IconButton).simulate("click");
 

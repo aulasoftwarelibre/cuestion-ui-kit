@@ -11,7 +11,11 @@ interface Props {
   length: number;
 }
 
-const _SessionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, length }) => {
+const _SessionInput: React.FunctionComponent<Props> = ({
+  handleOnSubmit,
+  intl,
+  length,
+}) => {
   const [code, setCode] = React.useState<string>("");
 
   const handleChange = () => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +23,7 @@ const _SessionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, l
       event.target.value
         .toUpperCase()
         .substring(0, length)
-        .replace(/[^A-Z0-9]+/g, "")
+        .replace(/[^A-Z0-9]+/g, ""),
     );
   };
 
@@ -32,9 +36,12 @@ const _SessionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, l
   };
 
   const messageEnter = intl.formatMessage(messages.pressEnter, {});
-  const messageEnterLengthCharactersCode = intl.formatMessage(messages.enterLengthCharactersCode, {
-    length
-  });
+  const messageEnterLengthCharactersCode = intl.formatMessage(
+    messages.enterLengthCharactersCode,
+    {
+      length,
+    },
+  );
   const messageSessionCode = intl.formatMessage(messages.sessionCode, {});
 
   return (
@@ -44,7 +51,11 @@ const _SessionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, l
         name="code"
         type="text"
         label={messageSessionCode}
-        helperText={code.length === length ? messageEnter : messageEnterLengthCharactersCode}
+        helperText={
+          code.length === length
+            ? messageEnter
+            : messageEnterLengthCharactersCode
+        }
         onChange={handleChange()}
         value={code}
         variant="outlined"

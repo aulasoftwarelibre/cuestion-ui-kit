@@ -26,19 +26,25 @@ function Home() {
             "Question platform for the SalmorejoTech conference. Send your question or vote the ones that you find most interesting and we will make them for you to the speakers.",
           images: [
             {
-              url: "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png"
-            }
+              url:
+                "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png",
+            },
           ],
-          site_name: "Cuestion - SalmorejoTech"
+          site_name: "Cuestion - SalmorejoTech",
         }}
         twitter={{
           handle: "@aulasl",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
       <Body>
         <Logo src="/static/img/cuestion-logo.svg" />
-        <SessionInput length={4} handleOnSubmit={(value: string) => dispatch(actions.openSessionRequest({ value }))} />
+        <SessionInput
+          length={4}
+          handleOnSubmit={(value: string) =>
+            dispatch(actions.openSessionRequest({ value }))
+          }
+        />
       </Body>
       <Background />
       <ErrorMessage error={session.error} errorMessage={session.errorMessage} />

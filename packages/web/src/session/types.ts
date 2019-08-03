@@ -39,4 +39,7 @@ export interface OpenSessionFailureAction {
   error: true;
 }
 
-export type SessionActionTypes = OpenSessionRequestAction | OpenSessionSuccessAction | OpenSessionFailureAction;
+export type SessionActionTypes =
+  | OpenSessionRequestAction
+  | OpenSessionSuccessAction
+  | OpenSessionFailureAction;

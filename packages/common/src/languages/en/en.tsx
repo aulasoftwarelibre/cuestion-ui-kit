@@ -5,7 +5,7 @@ const messages = {
   pressEnter: "and press ENTER.",
   send: "Send",
   sessionCode: "Session Code",
-  yourName: "Your name (optional)"
+  yourName: "Your name (optional)",
 };
 
 export default messages;

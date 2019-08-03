@@ -18,5 +18,5 @@ stories.add(
       questions={object("Questions", questions)}
       title={text("title", "Question list")}
     />
-  ))
+  )),
 );

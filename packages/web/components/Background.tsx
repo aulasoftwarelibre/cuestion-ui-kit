@@ -5,25 +5,27 @@ import styled from "styled-components";
 const params = {
   particles: {
     number: {
-      value: 50
+      value: 50,
     },
     size: {
-      value: 3
+      value: 3,
     },
     color: {
-      value: "#cccccc"
+      value: "#cccccc",
     },
     line_linked: {
       enable: true,
       distance: 150,
       color: "#cccccc",
       opacity: 0.4,
-      width: 1
-    }
-  }
+      width: 1,
+    },
+  },
 };
 
-export const Background: React.FunctionComponent = () => <WrappedParticles params={params} />;
+export const Background: React.FunctionComponent = () => (
+  <WrappedParticles params={params} />
+);
 
 const WrappedParticles = styled(Particles)`
   position: absolute;

@@ -13,34 +13,37 @@ export interface Props {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     error: {
-      backgroundColor: theme.palette.error.dark
+      backgroundColor: theme.palette.error.dark,
     },
     icon: {
-      fontSize: 20
+      fontSize: 20,
     },
     iconVariant: {
       opacity: 0.9,
-      marginRight: theme.spacing(1)
+      marginRight: theme.spacing(1),
     },
     message: {
       display: "flex",
-      alignItems: "center"
-    }
-  })
+      alignItems: "center",
+    },
+  }),
 );
 
-const ErrorMessage: React.FunctionComponent<Props> = ({ error, errorMessage, onClose }) => {
+const ErrorMessage: React.FunctionComponent<Props> = ({
+  error,
+  errorMessage,
+  onClose,
+}) => {
   const classes = useStyles();
 
   return (
     <Snackbar
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "left"
+        horizontal: "left",
       }}
       open={error}
-      autoHideDuration={1000}
-    >
+      autoHideDuration={1000}>
       <SnackbarContent
         className={clsx(classes.error)}
         aria-describedby="client-snackbar"
@@ -51,9 +54,13 @@ const ErrorMessage: React.FunctionComponent<Props> = ({ error, errorMessage, onC
           </span>
         }
         action={[
-          <IconButton key="close" aria-label="close" color="inherit" onClick={onClose}>
+          <IconButton
+            key="close"
+            aria-label="close"
+            color="inherit"
+            onClick={onClose}>
             <Close className={classes.icon} />
-          </IconButton>
+          </IconButton>,
         ]}
       />
     </Snackbar>

@@ -20,7 +20,7 @@ stories
         talks={object("Talks", talks)}
         title={text("title", "Talk list")}
       />
-    ))
+    )),
   )
   .add(
     "filtered",
@@ -31,5 +31,5 @@ stories
         talks={object("Talks", talks)}
         title={text("title", "Talk list")}
       />
-    ))
+    )),
   );

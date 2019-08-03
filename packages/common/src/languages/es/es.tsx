@@ -5,7 +5,7 @@ const messages = {
   pressEnter: "y pulsa INTRO.",
   send: "Enviar",
   sessionCode: "Código de Sesión",
-  yourName: "Su nombre (opcional)"
+  yourName: "Su nombre (opcional)",
 };
 
 export default messages;

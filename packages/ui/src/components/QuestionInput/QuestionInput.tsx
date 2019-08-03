@@ -1,4 +1,12 @@
-import { AppBar, Avatar, Button, Grid, Paper, TextField, Toolbar } from "@material-ui/core";
+import {
+  AppBar,
+  Avatar,
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Toolbar,
+} from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 import * as React from "react";
@@ -9,31 +17,31 @@ import { messages } from "@cuestion/common";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     sendButton: {
-      marginRight: theme.spacing(1)
+      marginRight: theme.spacing(1),
     },
     block: {
-      display: "block"
+      display: "block",
     },
     contentWrapper: {
-      margin: "16px 16px"
+      margin: "16px 16px",
     },
     paper: {
       margin: "auto",
       maxWidth: 936,
-      overflow: "hidden"
+      overflow: "hidden",
     },
     searchBar: {
-      borderBottom: "1px solid rgba(0, 0, 0, 0.12)"
+      borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     },
     searchInput: {
-      fontSize: theme.typography.fontSize
+      fontSize: theme.typography.fontSize,
     },
     textField: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
-      width: "100%"
-    }
-  })
+      width: "100%",
+    },
+  }),
 );
 
 interface Props {
@@ -47,11 +55,15 @@ interface Question {
   question: string;
 }
 
-const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, length }) => {
+const _QuestionInput: React.FunctionComponent<Props> = ({
+  handleOnSubmit,
+  intl,
+  length,
+}) => {
   const [enabled, setEnabled] = React.useState<boolean>(false);
   const [data, setData] = React.useState<Question>({
     user: "",
-    question: ""
+    question: "",
   });
   const classes = useStyles();
 
@@ -61,21 +73,21 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, 
     }
 
     handleOnSubmit({
-      ...data
+      ...data,
     });
 
     setEnabled(false);
 
     setData({
       user: "",
-      question: ""
+      question: "",
     });
   };
 
   const handleOnChange = () => event => {
     setData({
       ...data,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
 
     if (event.target.name === "question") {
@@ -89,7 +101,9 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, 
         <TextField
           id="question"
           className={classes.textField}
-          helperText={intl.formatMessage(messages.enterLengthCharacters, { length })}
+          helperText={intl.formatMessage(messages.enterLengthCharacters, {
+            length,
+          })}
           label={intl.formatMessage(messages.askQuestion, {})}
           name="question"
           margin="normal"
@@ -99,7 +113,11 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, 
           value={data.question}
         />
       </div>
-      <AppBar className={classes.searchBar} position="static" color="default" elevation={0}>
+      <AppBar
+        className={classes.searchBar}
+        position="static"
+        color="default"
+        elevation={0}>
         <Toolbar>
           <Grid container spacing={2} alignItems="center">
             <Grid item>
@@ -112,7 +130,7 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, 
                 placeholder={intl.formatMessage(messages.yourName, {})}
                 InputProps={{
                   className: classes.searchInput,
-                  disableUnderline: true
+                  disableUnderline: true,
                 }}
                 name="user"
                 value={data.user}
@@ -120,7 +138,12 @@ const _QuestionInput: React.FunctionComponent<Props> = ({ handleOnSubmit, intl, 
               />
             </Grid>
             <Grid item>
-              <Button id="send" variant="contained" color="primary" onClick={() => onSubmit()} disabled={!enabled}>
+              <Button
+                id="send"
+                variant="contained"
+                color="primary"
+                onClick={() => onSubmit()}
+                disabled={!enabled}>
                 <FormattedMessage {...messages.send} />
               </Button>
             </Grid>

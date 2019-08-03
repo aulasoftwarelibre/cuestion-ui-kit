@@ -5,7 +5,11 @@ import { throwError } from "redux-saga-test-plan/providers";
 import { call } from "redux-saga/effects";
 import { searchByCode } from "../../api/session/search-by-code";
 import { watchOpenSessionRequest, watchOpenSessionSuccess } from "./sagas";
-import { OPEN_SESSION_FAILURE, OPEN_SESSION_REQUEST, OPEN_SESSION_SUCCESS } from "./types";
+import {
+  OPEN_SESSION_FAILURE,
+  OPEN_SESSION_REQUEST,
+  OPEN_SESSION_SUCCESS,
+} from "./types";
 
 describe("session sagas", () => {
   const session = { id: "ID", code: "CODE", title: "TITLE" };
@@ -15,11 +19,11 @@ describe("session sagas", () => {
       .provide([[call(searchByCode, "CODE"), { data: session }]])
       .put({
         type: OPEN_SESSION_SUCCESS,
-        payload: { session }
+        payload: { session },
       })
       .dispatch({
         type: OPEN_SESSION_REQUEST,
-        payload: { sessionCode: { value: "CODE" } }
+        payload: { sessionCode: { value: "CODE" } },
       })
       .silentRun();
   });
@@ -31,11 +35,11 @@ describe("session sagas", () => {
       .put({
         type: OPEN_SESSION_FAILURE,
         error: true,
-        payload: error
+        payload: error,
       })
       .dispatch({
         type: OPEN_SESSION_REQUEST,
-        payload: { sessionCode: { value: "CODE" } }
+        payload: { sessionCode: { value: "CODE" } },
       })
       .silentRun();
   });
@@ -46,7 +50,7 @@ describe("session sagas", () => {
       .call(Router.push, "/sessions/CODE")
       .dispatch({
         type: OPEN_SESSION_SUCCESS,
-        payload: { session }
+        payload: { session },
       })
       .silentRun();
   });

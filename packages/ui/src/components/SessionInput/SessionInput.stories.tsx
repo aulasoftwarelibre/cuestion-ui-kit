@@ -16,5 +16,5 @@ stories.add(
       handleOnSubmit={action("session-code")}
       length={number("Length", 4, { range: true, min: 4, max: 8, step: 1 })}
     />
-  ))
+  )),
 );
