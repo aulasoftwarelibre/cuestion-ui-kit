@@ -1,0 +1,5 @@
+{
+    "/api/sessions/1234/code": "/sessions/826cda8e-895f-419c-b9ed-4567368031ee",
+    "/api/sessions/:code/code": "/sessions/0",
+    "/api/*": "/$1"
+  }

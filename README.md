@@ -20,10 +20,6 @@ Install dependencies
 
     yarn install
 
-Before use the `@cuestion/ui` component, we need to build it
-
-    yarn build
-
 ## Working in UI
 
 Execute storybook:
@@ -32,7 +28,10 @@ Execute storybook:
 
 ## Working in web client
 
+Until backend is ready you can run a api mockup:
+
+    yarn mock:api
+
 Execute next.js
 
     yarn dev
-

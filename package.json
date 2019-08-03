@@ -22,6 +22,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
+    "redux-saga-test-plan": "^4.0.0-beta.2",
     "styled-components": "^4.3.2",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
@@ -41,13 +42,21 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
+    "build:test": "lerna run build --scope @cuestion/common --scope @cuestion/ui",
+    "prebuild:common": "lerna run build --scope @cuestion/ui",
+    "build:common": "lerna run build --scope @cuestion/common",
+    "build:ui": "lerna run build --scope @cuestion/ui",
+    "predev": "lerna run build --scope @cuestion/common --scope @cuestion/ui",
     "dev": "yarn workspace @cuestion/web dev",
+    "mock:api": "yarn workspace @cuestion/server mock:api",
     "prettier": "prettier --write --config ./.prettierrc 'packages/ui/src/**/*.ts{,x}' 'packages/web/{components,lib,pages}/**/*.ts{,x}'",
     "test": "jest",
-    "tslint": "tslint 'packages/*/src/**/*.{ts,tsx}'",
+    "tslint": "tslint -e 'packages/**/dist/**' 'packages/**/*.{ts,tsx}'",
     "tslint:fix": "yarn run tslint --fix",
+    "prestart": "lerna run build",
     "start": "yarn workspace @cuestion/web start",
+    "prestorybook": "lerna run build --scope @cuestion/common",
     "storybook": "yarn workspace @cuestion/ui storybook",
-    "storybook-deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
+    "storybook:deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
   }
 }

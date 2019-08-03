@@ -1,10 +1,16 @@
-import { SessionInput } from "@cuestion/ui";
+import { ErrorMessage, SessionInput } from "@cuestion/ui";
 import { NextSeo } from "next-seo";
-import Particles from "react-particles-js";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 
+import { Background } from "../components/Background";
+import { State } from "../src/reducer";
+import * as actions from "../src/session/actions";
+import { SessionState } from "../src/session/types";
+
 function Home() {
-  const handler = id => console.log("event", id);
+  const session = useSelector<State, SessionState>(store => store.session);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -18,7 +24,11 @@ function Home() {
           title: "Cuestion",
           description:
             "Question platform for the SalmorejoTech conference. Send your question or vote the ones that you find most interesting and we will make them for you to the speakers.",
-          images: [{ url: "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png" }],
+          images: [
+            {
+              url: "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png"
+            }
+          ],
           site_name: "Cuestion - SalmorejoTech"
         }}
         twitter={{
@@ -28,38 +38,10 @@ function Home() {
       />
       <Body>
         <Logo src="/static/img/cuestion-logo.svg" />
-        <SessionInput length={4} handleOnSubmit={handler} />
+        <SessionInput length={4} handleOnSubmit={(value: string) => dispatch(actions.openSessionRequest({ value }))} />
       </Body>
-      <Background
-        params={{
-          particles: {
-            number: {
-              value: 50
-            },
-            size: {
-              value: 3
-            },
-            color: {
-              value: "#cccccc"
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#cccccc",
-              opacity: 0.4,
-              width: 1
-            }
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: "repulse"
-              }
-            }
-          }
-        }}
-      />
+      <Background />
+      <ErrorMessage error={session.error} errorMessage={session.errorMessage} />
     </>
   );
 }
@@ -76,15 +58,6 @@ const Logo = styled.img`
   max-width: 100%;
   height: auto;
   margin-bottom: 2rem;
-`;
-
-const Background = styled(Particles)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  height: 98vh;
-  width: 100%;
 `;
 
 export default Home;
