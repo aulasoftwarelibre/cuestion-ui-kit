@@ -53,8 +53,10 @@
     "test": "jest",
     "tslint": "tslint -e 'packages/**/dist/**' 'packages/**/*.{ts,tsx}'",
     "tslint:fix": "yarn run tslint --fix",
+    "prestart": "lerna run build",
     "start": "yarn workspace @cuestion/web start",
+    "prestorybook": "lerna run build --scope @cuestion/common",
     "storybook": "yarn workspace @cuestion/ui storybook",
-    "storybook-deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
+    "storybook:deploy": "yarn workspace @cuestion/ui storybook-to-ghpages"
   }
 }
