@@ -11,6 +11,10 @@
     "json-server": "^0.15.0"
   },
   "scripts": {
-    "mock:api": "json-server --watch api/db.json --routes api/routes.json --port 4000"
+    "mock:api": "json-server --watch api/db.js --routes api/routes.json --port 4000"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "uuid": "^3.3.2"
   }
 }
