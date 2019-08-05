@@ -1,7 +1,7 @@
 const faker = require("faker");
 const uuid = require("uuid/v4");
 
-faker.seed(1);
+faker.seed(2);
 
 module.exports = () => {
     const data = { 
@@ -24,7 +24,7 @@ module.exports = () => {
         startsAt.setMinutes(startsAt.getMinutes() + 7);
         endsAt.setMinutes(startsAt.getMinutes() + 5);
 
-        const topics = ["A", "B", "C", "D", "E", "F", "G"]
+        const topics = ["Web", "Mobile", "Frontend", "Devops", "Backend", "Design", "Testing"]
 
         data.talks.push({
             "id": faker.random.uuid(),
