@@ -8,6 +8,7 @@ export interface Talk {
   endsAt: Date;
   speaker: string;
   topics: string[];
+  color: string;
 }
 
 export default Talk;
