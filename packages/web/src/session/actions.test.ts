@@ -1,3 +1,4 @@
+import { Session } from "@cuestion/ui";
 import * as actions from "./actions";
 import * as types from "./types";
 
@@ -19,10 +20,11 @@ describe("actions", () => {
 
 describe("actions", () => {
   it("should create an action to indicate success requesting a session", () => {
-    const session: types.Session = {
+    const session: Session = {
       id: "1",
       code: "1234",
       title: "My session",
+      logo: "/img/logo.png",
     };
     const expectedAction = {
       type: types.OPEN_SESSION_SUCCESS,

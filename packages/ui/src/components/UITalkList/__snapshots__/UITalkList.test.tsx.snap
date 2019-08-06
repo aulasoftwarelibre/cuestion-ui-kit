@@ -4,23 +4,32 @@ exports[`UITalkList should render correctly with filter 1`] = `
 <div
   className="makeStyles-root-1"
 >
+  <header
+    className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+      >
+        Talk List
+      </h6>
+    </div>
+  </header>
   <div
     className="MuiGrid-root MuiGrid-container"
   >
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
-    >
-      <h2
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
-      >
-        Talk List
-      </h2>
-    </div>
-    <div
       className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
     >
       <div
-        className="makeStyles-paper-152 makeStyles-blue-144 makeStyles-bluredCard-139"
+        className="makeStyles-paper-192 makeStyles-blue-184 makeStyles-bluredCard-179"
       >
         <div
           className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
@@ -30,18 +39,16 @@ exports[`UITalkList should render correctly with filter 1`] = `
           <div
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-sm-9"
           >
-            <div
-              className="event-shedule-info"
-            >
+            <div>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -59,30 +66,30 @@ exports[`UITalkList should render correctly with filter 1`] = `
                 </p>
               </span>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                     />
                   </svg>
                   Room 1
                 </p>
               </span>
               <h3
-                className="MuiTypography-root makeStyles-title-153 MuiTypography-h3"
+                className="MuiTypography-root makeStyles-title-193 MuiTypography-h3"
               >
                 <a
-                  className="makeStyles-link-150"
+                  className="makeStyles-link-190"
                 >
                   My awesome talk
                 </a>
@@ -93,7 +100,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-3"
           >
             <div
-              className="MuiAvatar-root makeStyles-avatar-137"
+              className="MuiAvatar-root makeStyles-avatar-177"
             >
               <img
                 className="MuiAvatar-img"
@@ -111,10 +118,10 @@ exports[`UITalkList should render correctly with filter 1`] = `
           }
         />
         <div
-          className="makeStyles-footer-143"
+          className="makeStyles-footer-183"
         >
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -125,7 +132,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
             </span>
           </div>
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -138,7 +145,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
           <button
             aria-expanded={false}
             aria-label="Show more"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-141 Mui-disabled Mui-disabled"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-181 Mui-disabled Mui-disabled"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
@@ -178,28 +185,26 @@ exports[`UITalkList should render correctly with filter 1`] = `
       className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
     >
       <div
-        className="makeStyles-paper-152 makeStyles-red-145"
+        className="makeStyles-paper-192 makeStyles-red-185"
       >
         <div
-          className="MuiGrid-root makeStyles-activeCard-138 MuiGrid-container MuiGrid-spacing-xs-2"
+          className="MuiGrid-root makeStyles-activeCard-178 MuiGrid-container MuiGrid-spacing-xs-2"
           id="actionArea"
           onClick={[Function]}
         >
           <div
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-sm-9"
           >
-            <div
-              className="event-shedule-info"
-            >
+            <div>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -217,30 +222,30 @@ exports[`UITalkList should render correctly with filter 1`] = `
                 </p>
               </span>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                     />
                   </svg>
                   Room 2
                 </p>
               </span>
               <h3
-                className="MuiTypography-root makeStyles-title-153 MuiTypography-h3"
+                className="MuiTypography-root makeStyles-title-193 MuiTypography-h3"
               >
                 <a
-                  className="makeStyles-link-150"
+                  className="makeStyles-link-190"
                 >
                   My amazing talk
                 </a>
@@ -251,7 +256,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-3"
           >
             <div
-              className="MuiAvatar-root makeStyles-avatar-137"
+              className="MuiAvatar-root makeStyles-avatar-177"
             >
               <img
                 className="MuiAvatar-img"
@@ -269,10 +274,10 @@ exports[`UITalkList should render correctly with filter 1`] = `
           }
         />
         <div
-          className="makeStyles-footer-143"
+          className="makeStyles-footer-183"
         >
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -283,7 +288,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
             </span>
           </div>
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -296,7 +301,7 @@ exports[`UITalkList should render correctly with filter 1`] = `
           <button
             aria-expanded={false}
             aria-label="Show more"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-141"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-181"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -340,44 +345,51 @@ exports[`UITalkList should render correctly without filter 1`] = `
 <div
   className="makeStyles-root-1"
 >
+  <header
+    className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+      >
+        Talk List
+      </h6>
+    </div>
+  </header>
   <div
     className="MuiGrid-root MuiGrid-container"
   >
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
-    >
-      <h2
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
-      >
-        Talk List
-      </h2>
-    </div>
-    <div
       className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
     >
       <div
-        className="makeStyles-paper-152 makeStyles-blue-144"
+        className="makeStyles-paper-192 makeStyles-blue-184"
       >
         <div
-          className="MuiGrid-root makeStyles-activeCard-138 MuiGrid-container MuiGrid-spacing-xs-2"
+          className="MuiGrid-root makeStyles-activeCard-178 MuiGrid-container MuiGrid-spacing-xs-2"
           id="actionArea"
           onClick={[Function]}
         >
           <div
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-sm-9"
           >
-            <div
-              className="event-shedule-info"
-            >
+            <div>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -395,30 +407,30 @@ exports[`UITalkList should render correctly without filter 1`] = `
                 </p>
               </span>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                     />
                   </svg>
                   Room 1
                 </p>
               </span>
               <h3
-                className="MuiTypography-root makeStyles-title-153 MuiTypography-h3"
+                className="MuiTypography-root makeStyles-title-193 MuiTypography-h3"
               >
                 <a
-                  className="makeStyles-link-150"
+                  className="makeStyles-link-190"
                 >
                   My awesome talk
                 </a>
@@ -429,7 +441,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-3"
           >
             <div
-              className="MuiAvatar-root makeStyles-avatar-137"
+              className="MuiAvatar-root makeStyles-avatar-177"
             >
               <img
                 className="MuiAvatar-img"
@@ -447,10 +459,10 @@ exports[`UITalkList should render correctly without filter 1`] = `
           }
         />
         <div
-          className="makeStyles-footer-143"
+          className="makeStyles-footer-183"
         >
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -461,7 +473,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
             </span>
           </div>
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -474,7 +486,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
           <button
             aria-expanded={false}
             aria-label="Show more"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-141"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-181"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -514,28 +526,26 @@ exports[`UITalkList should render correctly without filter 1`] = `
       className="MuiGrid-root makeStyles-grid-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
     >
       <div
-        className="makeStyles-paper-152 makeStyles-red-145"
+        className="makeStyles-paper-192 makeStyles-red-185"
       >
         <div
-          className="MuiGrid-root makeStyles-activeCard-138 MuiGrid-container MuiGrid-spacing-xs-2"
+          className="MuiGrid-root makeStyles-activeCard-178 MuiGrid-container MuiGrid-spacing-xs-2"
           id="actionArea"
           onClick={[Function]}
         >
           <div
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-sm-9"
           >
-            <div
-              className="event-shedule-info"
-            >
+            <div>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -553,30 +563,30 @@ exports[`UITalkList should render correctly without filter 1`] = `
                 </p>
               </span>
               <span
-                className="makeStyles-meta-151"
+                className="makeStyles-meta-191"
               >
                 <p
-                  className="MuiTypography-root makeStyles-font-146 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-font-186 MuiTypography-body1"
                 >
                   <svg
                     aria-hidden="true"
-                    className="MuiSvgIcon-root makeStyles-icon-147"
+                    className="MuiSvgIcon-root makeStyles-icon-187"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                     />
                   </svg>
                   Room 2
                 </p>
               </span>
               <h3
-                className="MuiTypography-root makeStyles-title-153 MuiTypography-h3"
+                className="MuiTypography-root makeStyles-title-193 MuiTypography-h3"
               >
                 <a
-                  className="makeStyles-link-150"
+                  className="makeStyles-link-190"
                 >
                   My amazing talk
                 </a>
@@ -587,7 +597,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-3"
           >
             <div
-              className="MuiAvatar-root makeStyles-avatar-137"
+              className="MuiAvatar-root makeStyles-avatar-177"
             >
               <img
                 className="MuiAvatar-img"
@@ -605,10 +615,10 @@ exports[`UITalkList should render correctly without filter 1`] = `
           }
         />
         <div
-          className="makeStyles-footer-143"
+          className="makeStyles-footer-183"
         >
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -619,7 +629,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
             </span>
           </div>
           <div
-            className="MuiChip-root makeStyles-chip-140 MuiChip-outlined"
+            className="MuiChip-root makeStyles-chip-180 MuiChip-outlined"
             onKeyDown={[Function]}
             onKeyUp={[Function]}
           >
@@ -632,7 +642,7 @@ exports[`UITalkList should render correctly without filter 1`] = `
           <button
             aria-expanded={false}
             aria-label="Show more"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-141"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-181"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}

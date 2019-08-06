@@ -1,19 +1,8 @@
-import { TalkList } from "@cuestion/ui";
-import Talk from "@cuestion/ui/dist/models/Talk";
-import {
-  AppBar,
-  Container,
-  Grid,
-  IconButton,
-  Paper,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+import { Session, Talk, UITalkList } from "@cuestion/ui";
+import { AppBar, Avatar, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
-import { Session } from "../../src/session/types";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
