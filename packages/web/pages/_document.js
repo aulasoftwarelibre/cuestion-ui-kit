@@ -14,7 +14,6 @@ class IntlDocument extends Document {
       <html lang={this.props.locale}>
         <Head>
           <meta charSet="utf-8" />
-          {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
@@ -23,7 +22,7 @@ class IntlDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />.
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
         </Head>
         <body>
           <Main />
@@ -59,11 +58,11 @@ IntlDocument.getInitialProps = async context => {
     locale,
     localeDataScript,
     styles: [
-      <>
+      <React.Fragment key="styles">
         {props.styles}
         {sheets.getStyleElement()}
-      </>
-    ]
+      </React.Fragment>,
+    ],
   };
 }
 

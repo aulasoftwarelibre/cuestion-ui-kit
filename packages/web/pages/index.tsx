@@ -56,7 +56,11 @@ const HomePage: NextPage = () => {
         }}
       />
       <div className={classes.body}>
-        <img className={classes.logo} src="/static/img/cuestion-logo.svg" />
+        <img
+          style={{ color: "#ffffff" }}
+          className={classes.logo}
+          src="/static/img/cuestion-logo-white.svg"
+        />
         <SessionInput
           length={4}
           handleOnSubmit={(value: string) =>
