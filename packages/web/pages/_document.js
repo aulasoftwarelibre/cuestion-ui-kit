@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from '@material-ui/styles';
+import theme from "../src/theme";
 
 // The document (which is SSR-only) needs to be customized to expose the locale
 // data for the user's locale for React Intl to work in the browser.
@@ -18,6 +19,7 @@ class IntlDocument extends Document {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
+          <meta name="theme-color" content={theme.palette.secondary.main} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
