@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import * as React from "react";
 import Talk from "../../models/Talk";
@@ -45,12 +45,14 @@ export const UITalkList: React.FunctionComponent<Props> = ({
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={0} justify="flex-start">
-        <Grid item key="title" xs={12}>
-          <Typography component="h2" variant="h6" color="primary">
+      <AppBar position="static" color="primary" style={{ width: "100%" }}>
+        <Toolbar>
+          <Typography variant="h6" color="inherit">
             {title}
           </Typography>
-        </Grid>
+        </Toolbar>
+      </AppBar>
+      <Grid container spacing={0} justify="flex-start">
         {list}
       </Grid>
     </div>
