@@ -1,5 +1,5 @@
 const faker = require("faker");
-const uuid = require("uuid/v4");
+const moment = require("moment");
 
 faker.seed(2);
 
@@ -9,21 +9,17 @@ module.exports = () => {
             {
                 "id": "826cda8e-895f-419c-b9ed-4567368031ee",
                 "code": "1234",
-                "title": "Cuestion Conference"
+                "title": "Cuestion Conference",
+                "logo": "/static/img/logo.png"
             }
         ],
         talks: []
     }
 
-    const startsAt = new Date();
-    startsAt.setMinutes(startsAt.getMinutes() - 30 );
-    const endsAt = new Date(startsAt.getTime());
-    endsAt.setMinutes(startsAt.getMinutes() + 5);
+    const startsAt = moment().subtract(30, 'minutes');
+    const endsAt = moment(startsAt).add(10, 'minutes');
 
     for (let i = 0; i < 5; i++) {
-        startsAt.setMinutes(startsAt.getMinutes() + 7);
-        endsAt.setMinutes(startsAt.getMinutes() + 5);
-
         const topics = ["Web", "Mobile", "Frontend", "Devops", "Backend", "Design", "Testing"]
 
         data.talks.push({
@@ -33,24 +29,29 @@ module.exports = () => {
             "description": faker.lorem.paragraph(),
             "room": "Track 1",
             "title": faker.lorem.sentence(),
-            "startsAt": new Date(startsAt.getTime()),
-            "endsAt": new Date(endsAt.getTime()),
+            "startsAt": startsAt.toISOString(),
+            "endsAt": endsAt.toISOString(),
             "speaker": faker.name.findName(),
-            "topics": faker.helpers.shuffle(topics).slice(0, 2)
+            "topics": faker.helpers.shuffle(topics).slice(0, 2),
+            "color": "blue",
         });
 
         data.talks.push({
-          "id": faker.random.uuid(),
-          "session": "826cda8e-895f-419c-b9ed",
-          "avatar": faker.image.avatar(),
-          "description": faker.lorem.paragraph(),
-          "room": "Track 2",
-          "title": faker.lorem.sentence(),
-          "startsAt": new Date(startsAt.getTime()),
-          "endsAt": new Date(endsAt.getTime()),
-          "speaker": faker.name.findName(),
-          "topics": faker.helpers.shuffle(topics).slice(0, 2)
-      });
+            "id": faker.random.uuid(),
+            "session": "826cda8e-895f-419c-b9ed",
+            "avatar": faker.image.avatar(),
+            "description": faker.lorem.paragraph(),
+            "room": "Track 2",
+            "title": faker.lorem.sentence(),
+            "startsAt": startsAt.toISOString(),
+            "endsAt": endsAt.toISOString(),
+            "speaker": faker.name.findName(),
+            "topics": faker.helpers.shuffle(topics).slice(0, 2),
+            "color": "red",
+        });
+
+        startsAt.add(15, 'minutes');
+        endsAt.add(15, 'minutes');
     }
     
     return data;
