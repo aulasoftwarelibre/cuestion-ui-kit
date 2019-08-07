@@ -1,5 +1,9 @@
 import {
   Avatar,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
   Chip,
   Collapse,
   Divider,
@@ -50,42 +54,45 @@ const _UITalkItem: React.FunctionComponent<Props> = ({
   ));
 
   return (
-    <div
-      className={clsx(classes.paper, classes[talk.color], {
+    <Card
+      className={clsx(classes[talk.color], {
         [classes.bluredCard]: !raised,
       })}>
-      <Grid
-        id="actionArea"
-        container
-        spacing={2}
-        className={clsx({ [classes.activeCard]: raised })}
-        onClick={() => raised && handleOnClick(talk.id)}>
-        <Grid item sm={9} xs={8}>
-          <div>
-            <span className={classes.meta}>
-              <Typography className={classes.font}>
-                <AccessTime className={classes.icon} />
-                {startsAt} - {endsAt}
-              </Typography>
-            </span>
-            <span className={classes.meta}>
-              <Typography className={classes.font}>
-                <Room className={classes.icon} />
-                {talk.room}
-              </Typography>
-            </span>
+      <CardActionArea disabled={!raised} onClick={() => handleOnClick(talk.id)}>
+        <CardContent>
+          <Grid
+            id="actionArea"
+            container
+            spacing={2}
+            className={clsx({ [classes.activeCard]: raised })}>
+            <Grid item sm={9} xs={8}>
+              <div>
+                <span className={classes.meta}>
+                  <Typography className={classes.font}>
+                    <AccessTime className={classes.icon} />
+                    {startsAt} - {endsAt}
+                  </Typography>
+                </span>
+                <span className={classes.meta}>
+                  <Typography className={classes.font}>
+                    <Room className={classes.icon} />
+                    {talk.room}
+                  </Typography>
+                </span>
 
-            <Typography variant="h3" className={classes.title}>
-              <a className={classes.link}>{talk.title}</a>
-            </Typography>
-          </div>
-        </Grid>
-        <Grid item sm={3} xs={4}>
-          <Avatar className={classes.avatar} src={talk.avatar} />
-        </Grid>
-      </Grid>
-      <Divider variant="middle" style={{ margin: "10px 0" }} />
-      <div className={classes.footer}>
+                <Typography variant="h3" className={classes.title}>
+                  {talk.title}
+                </Typography>
+              </div>
+            </Grid>
+            <Grid item sm={3} xs={4}>
+              <Avatar className={classes.avatar} src={talk.avatar} />
+            </Grid>
+          </Grid>
+        </CardContent>
+      </CardActionArea>
+      <Divider variant="middle" />
+      <CardActions>
         {topics}
         <IconButton
           disabled={!raised}
@@ -97,13 +104,15 @@ const _UITalkItem: React.FunctionComponent<Props> = ({
           aria-label="Show more">
           <ExpandMore />
         </IconButton>
-      </div>
+      </CardActions>
       <Collapse in={raised && expanded} timeout="auto" unmountOnExit={true}>
-        <Typography paragraph={true} className={classes.font}>
-          {talk.description}
-        </Typography>
+        <CardContent>
+          <Typography paragraph={true} className={classes.font}>
+            {talk.description}
+          </Typography>
+        </CardContent>
       </Collapse>
-    </div>
+    </Card>
   );
 };
 
@@ -135,6 +144,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "white",
       border: "1px solid white",
       marginLeft: "auto",
+      marginRight: "10px",
       transform: "rotate(0deg)",
       transition: theme.transitions.create("transform", {
         duration: theme.transitions.duration.shortest,
@@ -176,11 +186,6 @@ const useStyles = makeStyles((theme: Theme) =>
       maxWidth: "100%",
       maxHeight: "100%",
     },
-    link: {
-      textDecoration: "none",
-      color: "white",
-      lineHeight: "32px",
-    },
     meta: {
       margin: "0 0 5px",
       marginRight: "15px",
@@ -191,10 +196,11 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: "auto",
     },
     title: {
-      fontSize: "21px",
       color: "white",
-      margin: "0 0 6px",
+      fontSize: "21px",
       fontWeight: "bolder",
+      lineHeight: "32px",
+      margin: "0 0 6px",
     },
   }),
 );
