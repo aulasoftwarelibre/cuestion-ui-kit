@@ -1,4 +1,7 @@
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/styles';
 import App, { Container } from "next/app";
+import Head from 'next/head';
 import withRedux from "next-redux-wrapper";
 import withReduxSaga from "next-redux-saga";
 import * as React from "react";
@@ -6,6 +9,7 @@ import { IntlProvider, addLocaleData } from "react-intl";
 import { Provider } from "react-redux";
 
 import configureStore from "../src/store";
+import theme from '../src/theme';
 
 // Register React Intl's locale data for the user's locale in the browser. This
 // locale data was added to the page by `pages/_document.js`. This only happens
@@ -17,6 +21,14 @@ if (typeof window !== "undefined" && window.ReactIntlLocaleData) {
 }
 
 class MyApp extends App {
+  componentDidMount() {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }
+
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
 
@@ -38,11 +50,17 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Provider store={store}>
-          <IntlProvider locale={locale} messages={messages} initialNow={initialNow}>
-            <Component {...pageProps} />
-          </IntlProvider>
-        </Provider>
+        <Head>
+          <title>Cuestion</title>
+        </Head>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Provider store={store}>
+            <IntlProvider locale={locale} messages={messages} initialNow={initialNow}>
+              <Component {...pageProps} />
+            </IntlProvider>
+          </Provider>
+        </ThemeProvider>
       </Container>
     );
   }

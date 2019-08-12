@@ -98,6 +98,9 @@ exports[`TalkList should render correctly with filter 1`] = `
           <span
             className="MuiCardActionArea-focusHighlight"
           />
+          <span
+            className="MuiTouchRipple-root"
+          />
         </button>
         <hr
           className="MuiDivider-root MuiDivider-middle"
@@ -184,6 +187,9 @@ exports[`TalkList should render correctly with filter 1`] = `
                 />
               </svg>
             </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
           </button>
         </div>
       </div>
@@ -269,6 +275,9 @@ exports[`TalkList should render correctly with filter 1`] = `
           </div>
           <span
             className="MuiCardActionArea-focusHighlight"
+          />
+          <span
+            className="MuiTouchRipple-root"
           />
         </button>
         <hr
@@ -356,6 +365,9 @@ exports[`TalkList should render correctly with filter 1`] = `
                 />
               </svg>
             </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
           </button>
         </div>
       </div>

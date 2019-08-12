@@ -1,3 +1,4 @@
+import { Session } from "@cuestion/ui";
 import Router from "next/router";
 import { expectSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
@@ -12,7 +13,12 @@ import {
 } from "./types";
 
 describe("session sagas", () => {
-  const session = { id: "ID", code: "CODE", title: "TITLE" };
+  const session: Session = {
+    id: "ID",
+    code: "CODE",
+    title: "TITLE",
+    logo: "LOGO",
+  };
 
   it("should dispatch success action when session code exists", () => {
     return expectSaga(watchOpenSessionRequest)

@@ -1,8 +1,8 @@
+import { Session } from "@cuestion/ui";
 import {
   OPEN_SESSION_FAILURE,
   OPEN_SESSION_REQUEST,
   OPEN_SESSION_SUCCESS,
-  Session,
   SessionActionTypes,
   SessionCode,
 } from "./types";

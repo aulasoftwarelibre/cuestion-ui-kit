@@ -28,10 +28,10 @@ function* handleOpenSessionRequest({
 }: OpenSessionRequestAction) {
   try {
     const {
-      data: { id, code, title },
+      data: { id, code, title, logo },
     } = yield call(searchByCode, sessionCode.value);
 
-    yield put(openSessionSuccess({ id, code, title }));
+    yield put(openSessionSuccess({ id, code, title, logo }));
   } catch (errorMessage) {
     yield put(openSessionFailure(errorMessage));
   }

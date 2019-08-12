@@ -8,6 +8,7 @@ function createTalk(
   room: string,
   startsAt: Date,
   topics: string[],
+  color: string,
 ): Talk {
   faker.seed(Number(id));
 
@@ -24,6 +25,7 @@ function createTalk(
     startsAt,
     title,
     topics,
+    color,
   };
 }
 
@@ -33,6 +35,7 @@ export const talk: Talk = createTalk(
   "Room 1",
   new Date("2019/09/13 09:30:00 GMT"),
   ["Mobile", "Web"],
+  "blue",
 );
 
 export const talks: Talk[] = [
@@ -43,5 +46,6 @@ export const talks: Talk[] = [
     "Room 2",
     new Date("2019/09/13 09:30:00 GMT"),
     ["Frontend", "Agile"],
+    "red",
   ),
 ];

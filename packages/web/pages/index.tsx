@@ -1,16 +1,34 @@
 import { ErrorMessage, SessionInput } from "@cuestion/ui";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-
 import { Background } from "../components/Background";
 import { State } from "../src/reducer";
 import * as actions from "../src/session/actions";
 import { SessionState } from "../src/session/types";
 
-function Home() {
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    body: {
+      height: "98vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    logo: {
+      maxWidth: "100%",
+      height: "auto",
+      marginBottom: "2rem",
+    },
+  }),
+);
+
+const HomePage: NextPage = () => {
   const session = useSelector<State, SessionState>(store => store.session);
   const dispatch = useDispatch();
+  const classes = useStyles([]);
 
   return (
     <>
@@ -37,33 +55,23 @@ function Home() {
           cardType: "summary_large_image",
         }}
       />
-      <Body>
-        <Logo src="/static/img/cuestion-logo.svg" />
+      <div className={classes.body}>
+        <img
+          style={{ color: "#ffffff" }}
+          className={classes.logo}
+          src="/static/img/cuestion-logo-white.svg"
+        />
         <SessionInput
           length={4}
           handleOnSubmit={(value: string) =>
             dispatch(actions.openSessionRequest({ value }))
           }
         />
-      </Body>
+      </div>
       <Background />
       <ErrorMessage error={session.error} errorMessage={session.errorMessage} />
     </>
   );
-}
+};
 
-const Body = styled.div`
-  height: 98vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Logo = styled.img`
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-`;
-
-export default Home;
+export default HomePage;

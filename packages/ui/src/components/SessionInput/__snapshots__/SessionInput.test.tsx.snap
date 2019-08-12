@@ -18,6 +18,20 @@ exports[`SessionInput should render correctly 1`] = `
       className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
       onClick={[Function]}
     >
+      <input
+        aria-describedby="session-code-input-helper-text"
+        aria-invalid={false}
+        className="MuiInputBase-input MuiOutlinedInput-input"
+        disabled={false}
+        id="session-code-input"
+        name="code"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+        value=""
+      />
       <fieldset
         aria-hidden={true}
         className="PrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline"
@@ -44,20 +58,6 @@ exports[`SessionInput should render correctly 1`] = `
           />
         </legend>
       </fieldset>
-      <input
-        aria-describedby="session-code-input-helper-text"
-        aria-invalid={false}
-        className="MuiInputBase-input MuiOutlinedInput-input"
-        disabled={false}
-        id="session-code-input"
-        name="code"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={false}
-        type="text"
-        value=""
-      />
     </div>
     <p
       className="MuiFormHelperText-root MuiFormHelperText-contained"
