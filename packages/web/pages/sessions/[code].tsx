@@ -3,6 +3,7 @@ import { AppBar, Avatar, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
+import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -12,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
     appBarSpacer: theme.mixins.toolbar,
     content: {
       height: "100vh",
+      width: "100%",
       overflow: "auto",
     },
   }),
@@ -23,17 +25,15 @@ interface Props {
   talks: Talk[];
 }
 
-const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
-  const classes = useStyles({});
-
+const reduceTalks = (talks: Talk[]) => {
   const now = new Date();
 
-  const { currentTalks, nextTalks, passedTalks } = talks.reduce(
+  return talks.reduce(
     (
       filteredTalks: {
-        currentTalks: Talk[];
-        nextTalks: Talk[];
-        passedTalks: Talk[];
+        filteredCurrentTalks: Talk[];
+        filteredNextTalks: Talk[];
+        filteredPassedTalks: Talk[];
       },
       talk: Talk,
     ) => {
@@ -41,17 +41,38 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
       const end = new Date(talk.endsAt);
 
       if (end < now) {
-        filteredTalks.passedTalks.push(talk);
+        filteredTalks.filteredPassedTalks.push(talk);
       } else if (start <= now && now <= end) {
-        filteredTalks.currentTalks.push(talk);
+        filteredTalks.filteredCurrentTalks.push(talk);
       } else if (start > now) {
-        filteredTalks.nextTalks.push(talk);
+        filteredTalks.filteredNextTalks.push(talk);
       }
 
       return filteredTalks;
     },
-    { currentTalks: [], nextTalks: [], passedTalks: [] },
+    {
+      filteredCurrentTalks: [],
+      filteredNextTalks: [],
+      filteredPassedTalks: [],
+    },
   );
+};
+
+const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
+  const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setFilteredTalks(reduceTalks(talks));
+    }, 60000);
+    return () => clearInterval(timer);
+  }, [
+    filteredTalks.filteredCurrentTalks,
+    filteredTalks.filteredNextTalks,
+    filteredTalks.filteredPassedTalks,
+  ]);
+
+  const classes = useStyles({});
 
   return (
     <div className={classes.root}>
@@ -67,19 +88,19 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
         <div className={classes.appBarSpacer} />
         <UITalkList
           filter={[]}
-          talks={currentTalks}
+          talks={filteredTalks.filteredCurrentTalks}
           title="Current talks"
           handleOnClick={() => true}
         />
         <UITalkList
           filter={[]}
-          talks={nextTalks}
+          talks={filteredTalks.filteredNextTalks}
           title="Next talks"
           handleOnClick={() => true}
         />
         <UITalkList
           filter={[]}
-          talks={passedTalks}
+          talks={filteredTalks.filteredPassedTalks}
           title="Finished talks"
           handleOnClick={() => true}
         />
