@@ -78,6 +78,9 @@ exports[`SessionInput should render liked question snapshot 1`] = `
           />
         </svg>
       </span>
+      <span
+        className="MuiTouchRipple-root"
+      />
     </button>
     <p
       className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary"
