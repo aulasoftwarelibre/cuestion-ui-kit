@@ -1,4 +1,4 @@
-import { Session, Talk, UITalkList } from "@cuestion/ui";
+import { Session, Talk, UITalkList, Filter, Topic } from "@cuestion/ui";
 import { AppBar, Avatar, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import fetch from "isomorphic-unfetch";
@@ -25,6 +25,7 @@ interface Props {
   code?: string | string[];
   session: Session;
   talks: Talk[];
+  topics: Topic[];
 }
 
 const reduceTalks = (talks: Talk[]) => {
@@ -60,7 +61,7 @@ const reduceTalks = (talks: Talk[]) => {
   );
 };
 
-const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
+const SessionPage: NextPage<Props> = ({ code, session, talks, topics }) => {
   const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
   const dispatch = useDispatch();
 
@@ -89,6 +90,10 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
       </AppBar>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
+        <Filter
+          onChangeHandler
+          topics = { topics }        
+        />
         <UITalkList
           filter={[]}
           talks={filteredTalks.filteredCurrentTalks}
@@ -135,9 +140,16 @@ SessionPage.getInitialProps = async ({ query }) => {
     )}/talks`,
   );
 
-  const talks = await talksRequest.json();
+  const topicsRequest = await fetch(
+    `${process.env.NEXT_PUBLIC_API_HOST}/sessions/${encodeURIComponent(
+      code,
+    )}/topics`,
+  );
 
-  return { code, session, talks };
+  const talks = await talksRequest.json();
+  const topics = await topicsRequest.json();
+
+  return { code, session, talks, topics};
 };
 
 export default SessionPage;
