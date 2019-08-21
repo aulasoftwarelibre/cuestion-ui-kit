@@ -4,6 +4,8 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import * as actions from "../../src/talks/actions";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -60,6 +62,7 @@ const reduceTalks = (talks: Talk[]) => {
 
 const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
   const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -90,19 +93,25 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
           filter={[]}
           talks={filteredTalks.filteredCurrentTalks}
           title="Current talks"
-          handleOnClick={() => true}
+          handleOnClick={(value: string) =>
+            dispatch(actions.openSessionTalkPage({ value }))
+          }
         />
         <UITalkList
           filter={[]}
           talks={filteredTalks.filteredNextTalks}
           title="Next talks"
-          handleOnClick={() => true}
+          handleOnClick={(value: string) =>
+            dispatch(actions.openSessionTalkPage({ value }))
+          }
         />
         <UITalkList
           filter={[]}
           talks={filteredTalks.filteredPassedTalks}
           title="Finished talks"
-          handleOnClick={() => true}
+          handleOnClick={(value: string) =>
+            dispatch(actions.openSessionTalkPage({ value }))
+          }
         />
       </main>
     </div>
