@@ -13,7 +13,7 @@ module.exports = () => {
                 "logo": "/static/img/logo.png"
             }
         ],
-        talks: []
+        talks: []       
     }
 
     const startsAt = moment().subtract(30, 'minutes');
@@ -21,7 +21,6 @@ module.exports = () => {
 
     for (let i = 0; i < 5; i++) {
         const topics = ["Web", "Mobile", "Frontend", "Devops", "Backend", "Design", "Testing"]
-
         data.talks.push({
             "id": faker.random.uuid(),
             "session": "826cda8e-895f-419c-b9ed",
