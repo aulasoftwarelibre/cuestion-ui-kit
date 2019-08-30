@@ -4,8 +4,10 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../../src/talks/actions";
+import { TalksState } from "../../src/talks/types";
+import { State } from "../../src/reducer";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,7 +27,6 @@ interface Props {
   code?: string | string[];
   session: Session;
   talks: Talk[];
-  topics: Topic[];
 }
 
 const reduceTalks = (talks: Talk[]) => {
@@ -61,9 +62,13 @@ const reduceTalks = (talks: Talk[]) => {
   );
 };
 
-const SessionPage: NextPage<Props> = ({ code, session, talks, topics }) => {
+const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
   const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
   const dispatch = useDispatch();
+  const filter = useSelector<State, string[]>(store => store.talks.filter);
+  const filterStrings = filter.map((topic: string) => topic);
+
+  const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics), []))];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -91,19 +96,21 @@ const SessionPage: NextPage<Props> = ({ code, session, talks, topics }) => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Filter
-          onChangeHandler
+          onChangeHandler = { () => 
+            dispatch(actions.changeFilterSessionTopics({ topics })
+          } 
           topics = { topics }        
         />
         <UITalkList
-          filter={[]}
+          filter={filterStrings}
           talks={filteredTalks.filteredCurrentTalks}
           title="Current talks"
           handleOnClick={(value: string) =>
-            dispatch(actions.openSessionTalkPage({ value }))
+            dispatch(actions.openSessionTalkPage({ value })
           }
         />
         <UITalkList
-          filter={[]}
+          filter={filterStrings}
           talks={filteredTalks.filteredNextTalks}
           title="Next talks"
           handleOnClick={(value: string) =>
@@ -111,7 +118,7 @@ const SessionPage: NextPage<Props> = ({ code, session, talks, topics }) => {
           }
         />
         <UITalkList
-          filter={[]}
+          filter={filterStrings}
           talks={filteredTalks.filteredPassedTalks}
           title="Finished talks"
           handleOnClick={(value: string) =>
@@ -140,16 +147,11 @@ SessionPage.getInitialProps = async ({ query }) => {
     )}/talks`,
   );
 
-  const topicsRequest = await fetch(
-    `${process.env.NEXT_PUBLIC_API_HOST}/sessions/${encodeURIComponent(
-      code,
-    )}/topics`,
-  );
-
   const talks = await talksRequest.json();
-  const topics = await topicsRequest.json();
+  //let topicstemp: string[] = talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics));
+  //const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics)))];
 
-  return { code, session, talks, topics};
+  return { code, session, talks};
 };
 
 export default SessionPage;

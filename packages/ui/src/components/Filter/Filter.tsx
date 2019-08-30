@@ -9,7 +9,7 @@ import { Topic } from "../../models/Topic";
 
 export interface Props {
   onChangeHandler: any;
-  topics: Topic[];
+  topics: string[];
   intl: InjectedIntl;
 }
 
@@ -32,13 +32,13 @@ const _Filter: React.FunctionComponent<Props> = ({
 }) => {
   const classes = useStyles();
 
-  const [selected, setSelected] = React.useState<Topic[]>([]);
+  const [selected, setSelected] = React.useState<string[]>([]);
 
-  const onClickHandler = (topic: Topic) => (
+  const onClickHandler = (topic: string) => (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     const index: number = selected.indexOf(topic);
-    const updatedSelected: Topic[] =
+    const updatedSelected: string[] =
       index >= 0
         ? [...selected.slice(0, index), ...selected.slice(index + 1)]
         : [...selected, topic];
@@ -51,9 +51,9 @@ const _Filter: React.FunctionComponent<Props> = ({
     <div className={classes.root}>
       {topics.map(topic => (
         <Chip
-          key={topic.label}
+          key={topic}
           className={classes.chip}
-          label={topic.label}
+          label={topic}
           onClick={onClickHandler(topic)}
           icon={selected.indexOf(topic) >= 0 ? <DoneIcon /> : undefined}
         />
