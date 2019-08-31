@@ -3,6 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useDispatch, useSelector } from "react-redux";
+
 import { Background } from "../components/Background";
 import { State } from "../src/reducer";
 import * as actions from "../src/session/actions";
@@ -59,7 +60,7 @@ const HomePage: NextPage = () => {
         <img
           style={{ color: "#ffffff" }}
           className={classes.logo}
-          src="/static/img/cuestion-logo-white.svg"
+          src="/static/img/cuestion-logo.svg"
         />
         <SessionInput
           length={4}

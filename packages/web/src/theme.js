@@ -1,43 +1,17 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import * as colors from "@material-ui/core/colors";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: '#ffffff',
-      contrastText: "#60102f"
-    },
-    secondary: {
-      main: '#60102f',
-      contrastText: "#ffffff"
-    },
-    error: {
-      main: red.A400,
-    },
-    background: {
-      default: '#60102f',
-    },
+    primary: colors.indigo,
+    secondary: colors.amber,
+    error: colors.red,
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
   },
-  typography: {
-  },
-  overrides: {
-    MuiInputBase: {
-        root: {
-            color: "white",
-        }
-    },
-    MuiFormLabel: {
-        root: {
-            color: "white"
-        }
-    },
-    MuiFormHelperText: {
-        root: {
-            color: "white"
-        }
-    }
-  }
+  typography: {},
+  overrides: {},
 });
 
 export default theme;
