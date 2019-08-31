@@ -4,6 +4,7 @@ import Talk from "./Talk";
 
 function createTalk(
   id: string,
+  session: string,
   title: string,
   room: string,
   startsAt: Date,
@@ -16,10 +17,11 @@ function createTalk(
   endsAt.setMinutes(startsAt.getMinutes() + 50);
 
   return {
+    id,
+    session,
     avatar: faker.image.avatar(),
     description: faker.lorem.paragraph(),
     endsAt,
-    id,
     room,
     speaker: faker.name.findName(),
     startsAt,
@@ -30,6 +32,7 @@ function createTalk(
 }
 
 export const talk: Talk = createTalk(
+  "1",
   "1",
   "My awesome talk",
   "Room 1",
@@ -42,6 +45,7 @@ export const talks: Talk[] = [
   talk,
   createTalk(
     "2",
+    "1",
     "My amazing talk",
     "Room 2",
     new Date("2019/09/13 09:30:00 GMT"),

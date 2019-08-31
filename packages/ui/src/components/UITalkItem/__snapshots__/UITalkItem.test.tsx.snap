@@ -2,7 +2,7 @@
 
 exports[`UITalkItem should render correctly 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-blue-9 MuiPaper-rounded"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-5 makeStyles-blue-10 MuiPaper-rounded"
 >
   <button
     className="MuiButtonBase-root MuiCardActionArea-root"
@@ -34,14 +34,14 @@ exports[`UITalkItem should render correctly 1`] = `
         >
           <div>
             <span
-              className="makeStyles-meta-15"
+              className="makeStyles-meta-16"
             >
               <p
-                className="MuiTypography-root makeStyles-font-11 MuiTypography-body1"
+                className="MuiTypography-root makeStyles-font-12 MuiTypography-body1"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root makeStyles-icon-12"
+                  className="MuiSvgIcon-root makeStyles-icon-13"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -59,14 +59,14 @@ exports[`UITalkItem should render correctly 1`] = `
               </p>
             </span>
             <span
-              className="makeStyles-meta-15"
+              className="makeStyles-meta-16"
             >
               <p
-                className="MuiTypography-root makeStyles-font-11 MuiTypography-body1"
+                className="MuiTypography-root makeStyles-font-12 MuiTypography-body1"
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root makeStyles-icon-12"
+                  className="MuiSvgIcon-root makeStyles-icon-13"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ exports[`UITalkItem should render correctly 1`] = `
               </p>
             </span>
             <h3
-              className="MuiTypography-root makeStyles-title-17 MuiTypography-h3"
+              className="MuiTypography-root makeStyles-title-18 MuiTypography-h3"
             >
               My awesome talk
             </h3>
@@ -110,7 +110,7 @@ exports[`UITalkItem should render correctly 1`] = `
     className="MuiCardActions-root MuiCardActions-spacing"
   >
     <div
-      className="MuiChip-root makeStyles-chip-5 MuiChip-outlined"
+      className="MuiChip-root makeStyles-chip-6 MuiChip-outlined"
       onKeyDown={[Function]}
       onKeyUp={[Function]}
     >
@@ -121,7 +121,7 @@ exports[`UITalkItem should render correctly 1`] = `
       </span>
     </div>
     <div
-      className="MuiChip-root makeStyles-chip-5 MuiChip-outlined"
+      className="MuiChip-root makeStyles-chip-6 MuiChip-outlined"
       onKeyDown={[Function]}
       onKeyUp={[Function]}
     >
@@ -134,7 +134,7 @@ exports[`UITalkItem should render correctly 1`] = `
     <button
       aria-expanded={false}
       aria-label="Show more"
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-6"
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-expand-7"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

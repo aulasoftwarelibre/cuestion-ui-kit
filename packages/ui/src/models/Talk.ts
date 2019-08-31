@@ -9,6 +9,7 @@ export interface Talk {
   speaker: string;
   topics: string[];
   color: string;
+  session: string;
 }
 
 export default Talk;
