@@ -1,14 +1,17 @@
-import * as React from "react";
-
-import { Grid, Typography } from "@material-ui/core";
+import { messages } from "@cuestion/common";
+import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import * as React from "react";
+import { InjectedIntl, injectIntl } from "react-intl";
+
 import Question from "../../models/Question";
+import { question } from "../../models/Question.mock";
 import QuestionItem from "../QuestionItem/QuestionItem";
 
 export interface Props {
   handleOnClick: any;
+  intl: InjectedIntl;
   questions: Question[];
-  title: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -16,18 +19,17 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       overflow: "hidden",
-      padding: theme.spacing(0, 1),
     },
     grid: {
-      padding: theme.spacing(2),
+      padding: theme.spacing(0),
     },
   }),
 );
 
-export const QuestionList: React.FunctionComponent<Props> = ({
+export const _QuestionList: React.FunctionComponent<Props> = ({
   handleOnClick,
+  intl,
   questions,
-  title,
 }) => {
   const classes = useStyles();
 
@@ -38,23 +40,29 @@ export const QuestionList: React.FunctionComponent<Props> = ({
   questions.sort(sortByVotes);
 
   const list = questions.map(question => (
-    <Grid item xs={12} key={question.id} className={classes.grid}>
+    <Grid item xs={12} md={6} key={question.id} className={classes.grid}>
       <QuestionItem handleOnClick={handleOnClick} question={question} />
     </Grid>
   ));
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2} justify="flex-start">
-        <Grid item key="title" xs={12} sm={6}>
-          <Typography component="h2" variant="h6" color="primary">
-            {title}
-          </Typography>
-        </Grid>
+      <Grid container spacing={0} justify="flex-start">
+        <AppBar position="static" style={{ width: "100%" }}>
+          <Toolbar variant="dense">
+            <Typography variant="body1">
+              {intl.formatMessage(messages.countQuestions, {
+                count: questions.length,
+              })}
+            </Typography>
+          </Toolbar>
+        </AppBar>
         {list}
       </Grid>
     </div>
   );
 };
+
+export const QuestionList = injectIntl(_QuestionList);
 
 export default QuestionList;
