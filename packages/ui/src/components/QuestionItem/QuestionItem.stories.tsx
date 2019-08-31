@@ -3,8 +3,7 @@ import { object, withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 
-import { question, question2 } from "../../models/Question.mock";
-
+import { createQuestion, question } from "../../models/Question.mock";
 import { wInfo } from "../../utils/wInfo";
 import QuestionItem from "./QuestionItem";
 
@@ -17,7 +16,7 @@ stories
     wInfo()(() => (
       <QuestionItem
         handleOnClick={action("question")}
-        question={object("Question", question)}
+        question={object("Question", createQuestion("1", 10, false))}
       />
     )),
   )
@@ -26,7 +25,7 @@ stories
     wInfo()(() => (
       <QuestionItem
         handleOnClick={action("question")}
-        question={object("Question", question2)}
+        question={object("Question", createQuestion("1", 10, true))}
       />
     )),
   );

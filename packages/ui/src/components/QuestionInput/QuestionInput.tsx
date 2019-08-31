@@ -1,3 +1,4 @@
+import { messages } from "@cuestion/common";
 import {
   AppBar,
   Avatar,
@@ -8,11 +9,8 @@ import {
   Toolbar,
 } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-
 import * as React from "react";
 import { FormattedMessage, InjectedIntl, injectIntl } from "react-intl";
-
-import { messages } from "@cuestion/common";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,12 +21,12 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "block",
     },
     contentWrapper: {
-      margin: "16px 16px",
+      margin: "0px 16px 16px",
     },
     paper: {
-      margin: "auto",
-      maxWidth: 936,
-      overflow: "hidden",
+      borderRadius: 0,
+      margin: 0,
+      padding: 0,
     },
     searchBar: {
       borderBottom: "1px solid rgba(0, 0, 0, 0.12)",

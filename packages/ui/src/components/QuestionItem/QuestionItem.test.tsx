@@ -1,7 +1,7 @@
-import IconButton from "@material-ui/core/IconButton";
+import Chip from "@material-ui/core/Chip";
 import * as React from "react";
-import { question, question2 } from "../../models/Question.mock";
 
+import { question, question2 } from "../../models/Question.mock";
 import {
   createComponentWithIntl,
   mountWithIntl,
@@ -32,7 +32,7 @@ describe("SessionInput", () => {
       <QuestionItem handleOnClick={mockOnHandleClick} question={question} />,
     );
 
-    component.find(IconButton).simulate("click");
+    component.find(Chip).simulate("click");
 
     expect(mockOnHandleClick).toHaveBeenCalledWith(
       question.id,
@@ -45,7 +45,7 @@ describe("SessionInput", () => {
       <QuestionItem handleOnClick={mockOnHandleClick} question={question2} />,
     );
 
-    component.find(IconButton).simulate("click");
+    component.find(Chip).simulate("click");
 
     expect(mockOnHandleClick).toHaveBeenCalledWith(
       question2.id,
