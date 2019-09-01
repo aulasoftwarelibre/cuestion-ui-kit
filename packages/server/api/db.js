@@ -15,6 +15,7 @@ module.exports = () => {
     ],
     talks: [],
     questions: [],
+    voted_questions: [],
   };
 
   const startsAt = moment().subtract(30, "minutes");
@@ -48,8 +49,8 @@ module.exports = () => {
       color: color,
     });
 
-    for (let j = 0; j < 3; j++) {
-      data.questions.push({
+    for (let j = 0; j < i % 4; j++) {
+      const question = {
         id: faker.random.uuid(),
         talk: talkId,
         question: faker.lorem.sentence(),
@@ -57,7 +58,12 @@ module.exports = () => {
         createdAt: faker.date.recent().toISOString(),
         votes: faker.random.number({ min: 0, max: 15 }),
         isVoted: false,
-      });
+      };
+      data.questions.push(question);
+
+      if (j % 2 === 0 && question.votes > 0) {
+        data.voted_questions.push(question.id);
+      }
     }
 
     if (i % 2 === 1) {

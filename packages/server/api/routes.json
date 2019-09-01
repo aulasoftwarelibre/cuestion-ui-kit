@@ -4,5 +4,6 @@
   "/api/sessions/1234/talks": "/talks",
   "/api/sessions/talks/:id": "/talks/:id",
   "/api/talks/:id/questions": "/questions?talk=:id",
+  "/api/talks/:id/voted": "/voted_questions",
   "/api/*": "/$1"
 }

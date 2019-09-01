@@ -48,10 +48,17 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
   talk: Talk;
   questions: Question[];
+  votedQuestions: string[];
 }
 
-const TalkPage: NextPage<Props> = ({ talk, questions }) => {
+const TalkPage: NextPage<Props> = ({ talk, questions, votedQuestions }) => {
   const classes = useStyles({});
+
+  questions.forEach(
+    question =>
+      (question.isVoted =
+        votedQuestions.filter(voted => voted === question.id).length > 0),
+  );
 
   return (
     <div className={classes.root}>
@@ -98,7 +105,13 @@ TalkPage.getInitialProps = async ({ query }) => {
 
   const questions = await questionsRequest.json();
 
-  return { talk, questions };
+  const votedQuestionsRequest = await fetch(
+    `${process.env.NEXT_PUBLIC_API_HOST}/talks/${encodeURIComponent(id)}/voted`,
+  );
+
+  const votedQuestions = await votedQuestionsRequest.json();
+
+  return { talk, questions, votedQuestions };
 };
 
 export default TalkPage;
