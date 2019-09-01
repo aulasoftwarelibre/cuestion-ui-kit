@@ -5,6 +5,7 @@ import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+
 import * as actions from "../../src/talks/actions";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -79,7 +80,7 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar color="secondary" position="absolute">
+      <AppBar color="primary" position="absolute">
         <Toolbar>
           <Avatar src={session.logo} style={{ marginRight: "5px" }} />
           <Typography component="h1" variant="h6" color="inherit" noWrap>

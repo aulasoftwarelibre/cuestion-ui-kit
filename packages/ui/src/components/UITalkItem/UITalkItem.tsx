@@ -55,7 +55,7 @@ const _UITalkItem: React.FunctionComponent<Props> = ({
 
   return (
     <Card
-      className={clsx(classes[talk.color], {
+      className={clsx(classes.card, classes[talk.color], {
         [classes.bluredCard]: !raised,
       })}>
       <CardActionArea disabled={!raised} onClick={() => handleOnClick(talk.id)}>
@@ -134,6 +134,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     bluredCard: {
       filter: "blur(3px)",
+    },
+    card: {
+      borderRadius: 0,
     },
     chip: {
       color: "white",

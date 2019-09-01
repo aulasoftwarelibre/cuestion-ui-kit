@@ -4,6 +4,11 @@ const messages = {
     description: "",
     id: "askQuestion",
   },
+  countQuestions: {
+    defaultMessage: `{count, plural, =0 {no questions} one {# question} other {# questions}}`,
+    description: "",
+    id: "countQuestions",
+  },
   enterLengthCharacters: {
     defaultMessage: `Enter {length} characters`,
     description: "",

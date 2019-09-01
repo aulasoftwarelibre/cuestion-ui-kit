@@ -1,6 +1,7 @@
 import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import * as React from "react";
+
 import Talk from "../../models/Talk";
 import UITalkItem from "../UITalkItem";
 
@@ -45,9 +46,9 @@ export const UITalkList: React.FunctionComponent<Props> = ({
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary" style={{ width: "100%" }}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit">
+      <AppBar position="static" color="default" style={{ width: "100%" }}>
+        <Toolbar variant="dense">
+          <Typography variant="body1" color="inherit">
             {title}
           </Typography>
         </Toolbar>
