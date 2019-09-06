@@ -1,13 +1,13 @@
-import { Session, Talk, UITalkList, Filter, Topic } from "@cuestion/ui";
+import { Filter, Session, Talk, Topic, UITalkList } from "@cuestion/ui";
 import { AppBar, Avatar, Toolbar, Typography } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import fetch from "isomorphic-unfetch";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { State } from "../../src/reducer";
 import * as actions from "../../src/talks/actions";
 import { TalksState } from "../../src/talks/types";
-import { State } from "../../src/reducer";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -67,7 +67,14 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
   const dispatch = useDispatch();
   const filter = useSelector<State, string[]>(store => store.talks.filter);
 
-  const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics), []))];
+  const topics = [
+    ...new Set(
+      talks.reduce(
+        (topics: string[], talk: Talk): string[] => topics.concat(talk.topics),
+        [],
+      ),
+    ),
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -82,9 +89,7 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
 
   const classes = useStyles({});
 
-
   return (
-    
     <div className={classes.root}>
       <AppBar color="secondary" position="absolute">
         <Toolbar>
@@ -97,10 +102,10 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Filter
-          onChangeHandler = { (value: string[]) => 
-            dispatch(actions.changeFilterSessionTopics( value ))
+          onChangeHandler={(value: string[]) =>
+            dispatch(actions.changeFilterSessionTopics(value))
           }
-          topics = { topics }        
+          topics={topics}
         />
         <UITalkList
           filter={filter}
@@ -149,10 +154,10 @@ SessionPage.getInitialProps = async ({ query }) => {
   );
 
   const talks = await talksRequest.json();
-  //let topicstemp: string[] = talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics));
-  //const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics)))];
+  // let topicstemp: string[] = talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics));
+  // const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics)))];
 
-  return { code, session, talks};
+  return { code, session, talks };
 };
 
 export default SessionPage;

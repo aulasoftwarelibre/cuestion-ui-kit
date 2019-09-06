@@ -12,5 +12,5 @@ export const reducer: Reducer<State> = combineReducers({
 
 export interface State {
   readonly session: SessionState;
-  readonly talks: TalksState;  
+  readonly talks: TalksState;
 }

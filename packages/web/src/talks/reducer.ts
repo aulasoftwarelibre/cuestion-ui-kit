@@ -1,10 +1,10 @@
+import { filter } from "minimatch";
 import { Reducer } from "redux";
 import {
   FILTER_SESSION_TOPICS_CHANGE,
   TalksActionTypes,
   TalksState,
 } from "./types";
-import { filter } from "minimatch";
 
 const initialState: TalksState = {
   filter: [],
@@ -17,7 +17,7 @@ const reducer: Reducer<TalksState, TalksActionTypes> = (
   switch (action.type) {
     case FILTER_SESSION_TOPICS_CHANGE:
       return {
-        filter: action.payload
+        filter: action.payload,
       };
     default:
       return state;

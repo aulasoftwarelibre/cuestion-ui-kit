@@ -1,7 +1,8 @@
 import { Topic } from "@cuestion/ui";
 
 export const OPEN_SESSION_TALK_PAGE = "@@talks/OPEN_SESSION_TALK_PAGE";
-export const FILTER_SESSION_TOPICS_CHANGE = "@@talks/FILTER_SESSION_TOPICS_CHANGE";
+export const FILTER_SESSION_TOPICS_CHANGE =
+  "@@talks/FILTER_SESSION_TOPICS_CHANGE";
 
 export interface TalkId {
   value: string;
@@ -18,7 +19,9 @@ export interface ChangeFilterSessionTopicsAction {
 }
 
 export interface TalksState {
-  readonly filter: string[],
+  readonly filter: string[];
 }
 
-export type TalksActionTypes = OpenSessionTalkPageAction | ChangeFilterSessionTopicsAction;
+export type TalksActionTypes =
+  | OpenSessionTalkPageAction
+  | ChangeFilterSessionTopicsAction;
