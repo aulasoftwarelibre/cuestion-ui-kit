@@ -4,6 +4,7 @@ import {
   TalksActionTypes,
   TalksState,
 } from "./types";
+import { filter } from "minimatch";
 
 const initialState: TalksState = {
   filter: [],

@@ -66,7 +66,6 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
   const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
   const dispatch = useDispatch();
   const filter = useSelector<State, string[]>(store => store.talks.filter);
-  const filterStrings = filter.map((topic: string) => topic);
 
   const topics = [...new Set(talks.reduce((topics: string[], talk: Talk): string[] => topics.concat(talk.topics), []))];
 
@@ -83,7 +82,9 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
 
   const classes = useStyles({});
 
+
   return (
+    
     <div className={classes.root}>
       <AppBar color="secondary" position="absolute">
         <Toolbar>
@@ -96,21 +97,21 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Filter
-          onChangeHandler = { () => 
-            dispatch(actions.changeFilterSessionTopics({ topics })
-          } 
+          onChangeHandler = { (value: string[]) => 
+            dispatch(actions.changeFilterSessionTopics( value ))
+          }
           topics = { topics }        
         />
         <UITalkList
-          filter={filterStrings}
+          filter={filter}
           talks={filteredTalks.filteredCurrentTalks}
           title="Current talks"
           handleOnClick={(value: string) =>
-            dispatch(actions.openSessionTalkPage({ value })
+            dispatch(actions.openSessionTalkPage({ value }))
           }
         />
         <UITalkList
-          filter={filterStrings}
+          filter={filter}
           talks={filteredTalks.filteredNextTalks}
           title="Next talks"
           handleOnClick={(value: string) =>
@@ -118,7 +119,7 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
           }
         />
         <UITalkList
-          filter={filterStrings}
+          filter={filter}
           talks={filteredTalks.filteredPassedTalks}
           title="Finished talks"
           handleOnClick={(value: string) =>
