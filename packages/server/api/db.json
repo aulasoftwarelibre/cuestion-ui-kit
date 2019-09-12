@@ -178,5 +178,82 @@
       "session": "1234",
       "color": "blue"
     }
-  ]
+  ],
+  "poi": {
+      "conference": [
+        {
+          "id": "1",
+          "title": "Rectorado de la Universidad de Córdoba",
+          "description": "Lugar donde se celebrará el congreso",
+          "url": "https://www.google.com/maps/place/Rectorado,+14001+C%C3%B3rdoba,+Espa%C3%B1a/@37.8853802,-4.7804377,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf7cc1f7920d:0x66694f6b7ada3cbc!8m2!3d37.8853802!4d-4.778249"
+        },
+        {
+          "id": "2",
+          "title": "Mercado Victoria",
+          "description": "10% de descuento con tu acreditación",
+          "url": "https://www.google.com/maps/place/Mercado+Victoria/@37.88381,-4.7875703,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf6183399dc5:0x1fc5901a2b465615!8m2!3d37.88381!4d-4.7853816"
+        }
+    ],
+
+    "lunch": [
+      {
+        "id": "1",
+        "title": "Boxer Food ",
+        "description": "Restaurantes Gourmet localizado cerca del congreso con una amplia carta de la gastronomía cordobesa, combinando lo mejor de la gastronomía norteamericana y mediterranea en sus platos. ",
+        "url": "https://www.google.com/maps/place/Boxer+Food+-+Genuine+Street+Food/@37.8850301,-4.7919334,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf9a85e16a9b:0x5887a22efe2a3726!8m2!3d37.8850301!4d-4.7897447"
+      },
+      {
+        "id": "2",
+        "title": "Cafetería del Rectorado",
+        "description": "A la entrada del rectorado se encuentra la cafetería, lugar ideal para descansar y tomar algo entre charlas junto con los demás asistentes del congreso.",
+        "url": "https://www.google.com/maps?client=ubuntu&channel=fs&q=cafeteria+rectorado+cordoba&oe=utf-8&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiN2e6h6MvkAhVaBGMBHWqRCOoQ_AUIEigB"
+      },
+      {
+        "id": "3",
+        "title": "Mercado Victoria",
+        "description": "10% de descuento con tu acreditación",
+        "url": "https://www.google.com/maps/place/Mercado+Victoria/@37.88381,-4.7875703,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf6183399dc5:0x1fc5901a2b465615!8m2!3d37.88381!4d-4.7853816"
+      },
+      {
+        "id": "4",
+        "title": "Bar Moriles",
+        "description": "Paredes de ladrillo y sillas de hierro y madera en comedor con carácter para flamenquines y otras tapas. ",
+        "url": "https://www.google.com/maps/place/Bar+Moriles/@37.88272,-4.7905489,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf6040601513:0x2845ad1e46a627a9!8m2!3d37.88272!4d-4.7883602"
+      },
+      {
+        "id": "5",
+        "title": "La Fabbrica  ",
+        "description": "Desenfadado local de corte urbano y decoración ecléctica para pizzas con nombres de artistas o al gusto.",
+        "url": "https://www.google.com/maps/place/La+Fabbrica/@37.8831368,-4.7920001,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf6077c608a5:0xd090b7771a8d71c2!8m2!3d37.8831368!4d-4.7898114"
+      }
+
+    ],
+
+    "breakfast": [
+      {
+        "id": "1",
+        "title": "Cafetería del rectorado",
+        "description": "A la entrada del rectorado se encuentra la cafetería, lugar ideal para descansar y tomar algo entre charlas junto con los demás asistentes del congreso.",
+        "url": "https://www.google.com/maps?client=ubuntu&channel=fs&q=cafeteria+rectorado+cordoba&oe=utf-8&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiN2e6h6MvkAhVaBGMBHWqRCOoQ_AUIEigB"
+      },
+      {
+        "id": "2",
+        "title": "Restaurante Canadian",
+        "description": "Localizado a 150 metros del congreso, este restaurante ofrece una amplia carta de desayunos económicos y de gran calidad, lugar excelente para reponer fuerzas y hacer networking",
+        "url": "https://www.google.com/maps/place/Canadian/@37.8843757,-4.7919696,17z/data=!3m1!4b1!4m5!3m4!1s0xd6cdf60827bc787:0x72640a5dd67484d0!8m2!3d37.8843757!4d-4.7897809"
+      },
+      {
+        "id": "3",
+        "title": "El diario de Noah",
+        "description": "Especializado en desayunos, este bar ofrece un ambiente tranquilo donde conversar y tomar unas cervezas acompañado de una tapa típica de la ciudad",
+        "url": "https://www.google.com/maps?client=ubuntu&hs=m2&channel=fs&sxsrf=ACYBGNQuJn0DiP5Gn4KrooXfCVyzi_tQFQ:1568307865594&q=diario+de+noa+restaurante+cordoba&uact=5&um=1&ie=UTF-8&sa=X&ved=0ahUKEwitqeiN4svkAhVj1uAKHfskCD0Q_AUIFSgE"
+      },
+      {
+        "id": "4",
+        "title": "Pasteleria Savoy",
+        "description": "Cafetería, panadería, pastelería con un variado surtido de dulces, lugar ideal para tomar un cafe tranquilamente y recargar energías.",
+        "url": "https://www.google.com/maps/place/Confiteria+Savoy+Pasteleria+-+Pan/@37.8807425,-4.7918713,17z/data=!4m5!3m4!1s0xd6d20a002fd9ecd:0x9e13338d5a2d34f3!8m2!3d37.880739!4d-4.7900308"
+      }
+    ]
+  }
 }
