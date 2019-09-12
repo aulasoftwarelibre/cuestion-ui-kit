@@ -67,9 +67,9 @@ const PoiPage: NextPage<Props> = ({ session, poi }) => {
 
   const mapsSelector = location => {
     if (
-      navigator.platform.indexOf("iPhone") != -1 ||
-      navigator.platform.indexOf("iPad") != -1 ||
-      navigator.platform.indexOf("iPod") != -1
+      navigator.platform.indexOf("iPhone") !== -1 ||
+      navigator.platform.indexOf("iPad") !== -1 ||
+      navigator.platform.indexOf("iPod") !== -1
     ) {
       window.open(location);
     } else {
@@ -92,7 +92,7 @@ const PoiPage: NextPage<Props> = ({ session, poi }) => {
           subheader={<ListSubheader>Congreso</ListSubheader>}
           className={classes.list}>
           {poi.conference.map(point => (
-            <ListItem>
+            <ListItem key={point.id}>
               <ListItemText
                 id={point.id}
                 primary={point.title}
@@ -110,7 +110,7 @@ const PoiPage: NextPage<Props> = ({ session, poi }) => {
           subheader={<ListSubheader>Desayuno</ListSubheader>}
           className={classes.list}>
           {poi.breakfast.map(point => (
-            <ListItem>
+            <ListItem key={point.id}>
               <ListItemText
                 id={point.id}
                 primary={point.title}
@@ -128,7 +128,7 @@ const PoiPage: NextPage<Props> = ({ session, poi }) => {
           subheader={<ListSubheader>Almuerzo</ListSubheader>}
           className={classes.list}>
           {poi.lunch.map(point => (
-            <ListItem>
+            <ListItem key={point.id}>
               <ListItemText
                 id={point.id}
                 primary={point.title}
