@@ -1,0 +1,259 @@
+{
+  "sessions": [
+    {
+      "id": "826cda8e-895f-419c-b9ed-4567368031ee",
+      "code": "1234",
+      "title": "SalmorejoTech 2019",
+      "logo": "/static/img/salmorejo.png"
+    }
+  ],
+  "talks": [
+    {
+      "id": "1",
+      "title": "Como gestionar 20 millones de peticiones al día y no morir en el intento",
+      "description": "¿Cómo escalas un producto que registra más de 5000 usuarios nuevos todos los días y más de 20 M de peticiones nuevas? ¿Y si te digo que nuestros usuarios vienen de más de 100 países? ¿Y si te cuento encima que no tenemos a ningún DevOps en el equipo? Mi nombre es Chema Roldán y soy CTO y co-fundador de Genially. Me gustaría compartir con vosotros cómo hemos conseguido escalar nuestra infraestructura de manera eficiente y de forma real. Hablaremos de cómo utilizamos los servicios de AWS como Route53, Elastic Beanstalk, Lambda, API Gateway, SQS y Elastic Container Service. ¡Nos vamos a divertir!",
+      "speaker": "Chema Roldán",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/chemaroldan-e1559502149869.png",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T07:30:00Z",
+      "endsAt": "2019-09-13T08:15:00Z",
+      "topics": ["Cloud"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "2",
+      "title": "Azure Digital Twins un mundo paralelo",
+      "description": "¿Quieres aprender a crear grafos de inteligencia espacial para modelar las relaciones y las interacciones entre personas, espacios y dispositivos? En esta sesión aprenderemos a crear experiencias reutilizables, muy escalables y conscientes del espacio que vincula la transmisión de los datos entre el mundo físico y el digital. Las aplicaciones están mejoradas con estas características contextuales apropiadas de forma exclusiva. Todo ello simplifica el modelado, el procesamiento de datos, el control de eventos y el seguimiento de dispositivos IoT. ¿Te lo vas a perder? Además, hablaremos de algunos casos de usos: Supervisar rutas de drones en uso, Identificar vehículos autónomos, Analizar los niveles de ocupación de un edificio, etc.",
+      "speaker": "Manuel Sánchez",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/manuelsanchez.jpg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T07:30:00Z",
+      "endsAt": "2019-09-13T08:15:00Z",
+      "topics": ["IoT"],
+      "session": "1234",
+      "color": "red"
+    },
+    {
+      "id": "3",
+      "title": "TDD in the javascript stack. A survival guide",
+      "description": "Hablaremos sobre cómo implementar testing usando jest + cypress tanto en frontend como en backend, siguiendo buenas prácticas y analizando diferentes casos de uso. Mejorándolos para llegar a un testing ligero y consistente",
+      "speaker": "Francisco Zurita",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/franciscozurita-e1557730430546.jpeg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T08:20:00Z",
+      "endsAt": "2019-09-13T09:05:00Z",
+      "topics": ["testing"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "4",
+      "title": "CARTO para interinos",
+      "description": "En CARTO hacemos herramientas para resolver problemas con datos geolocalizados, tanto analíticas como de visualización. Trabajamos con PostgreSQL, Postgis, node, python, webgl, Vue, Stencil, y liberamos prácticamente todo lo que hacemos. En esta charla vamos a utilizar datos abiertos y algunas de estas herramientas (isolíneas, rutas y las librerías de mapas / widgets) para resolver un problema: todos los años miles de interinos tienen que elegir una lista de destinos ordenada por preferencia de llamada.",
+      "speaker": "Román Jiménez",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/photo_2019-05-13-20.11.14.jpeg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T08:20:00Z",
+      "endsAt": "2019-09-13T09:05:00Z",
+      "topics": ["geo"],
+      "session": "1234",
+      "color": "red"
+    },
+    {
+      "id": "5",
+      "title": "Diseño de producto en desarrollo ágil",
+      "description": "Leticia es Product Designer en NoSoloSoftware. Durante 40 minutos nos mostrará como aplicar las metodologíaa ágiles aplicada al diseño de producto para conseguir un buen software.",
+      "speaker": "Leticia Capelo",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/photo_2019-06-04_15-29-38-e1559655055611.jpg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T09:50:00Z",
+      "endsAt": "2019-09-13T10:35:00Z",
+      "topics": ["design", "agile"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "6",
+      "title": "Diving into the native sea of React Native 🏊",
+      "description": "Cuando se desarrolla un aplicación con React-Native no se conoce realmente que hay por detrás para obtener una aplicación 100% nativa. Solo en determinados casos se debe hacer uso del puente que hay entre Javascript y Nativo. En esta charla se mostrará como funciona React Native, que hay detrás de ese bridge nativo y se realizará un ejemplo con Java.",
+      "speaker": "Iván Portillo",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/IvanPortillo-600x600.jpeg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T09:50:00Z",
+      "endsAt": "2019-09-13T10:35:00Z",
+      "topics": ["frontend", "mobile"],
+      "session": "1234",
+      "color": "red"
+    },
+    {
+      "id": "7",
+      "title": "Free Tour DDD",
+      "description": "Cuando desarrollamos una aplicación solemos dar más importancia al cómo guardamos la información, a la base de datos, que a la propia lógica de negocio. Así, nuestras entidades quedan llenas de getters y setters que provocan el antipatrón Anemic Domain Model. Domain-Driven Design (DDD) apuesta por el dominio y la lógica de negocio como parte fundamental del sistema, donde la base de datos es solo un detalle más. De esta manera, evitamos los problemas que causa el modelo anémico, haciendo más fácil el mantenimiento y la escalabilidad de nuestra aplicación. En esta charla haremos una introducción a DDD y lo pondremos en práctica en un ejemplo que todos conocemos.",
+      "speaker": "Víctor Monserrat",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/06/perfil-victor.jpg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T10:40:00Z",
+      "endsAt": "2019-09-13T11:25:00Z",
+      "topics": ["software", "architecture"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "8",
+      "title": "Conociendo las PWA con React",
+      "description": "Mucho se ha hablado de las Progressive Web Application y de cómo impactan en el desarrollo web moderno, ya que, en resumen, ofrecen las mejores cualidades de dos mundos: aplicaciones web y aplicaciones nativas. En esta charla se hablará de ellas, que son, cómo funcionan y cómo implementar todas sus ventajas a través de una de las librerías más utilizadas en todo el mundo para el desarrollo web, React.js.",
+      "speaker": "Marcela Gotta",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/42068979_733876386970503_993360592251827040_n-1-e1559502042543.jpg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T10:40:00Z",
+      "endsAt": "2019-09-13T11:25:00Z",
+      "topics": ["frontend"],
+      "session": "1234",
+      "color": "red"
+    },
+    {
+      "id": "9",
+      "title": "Las 5V’s de ¿Data Science?",
+      "description": "Cómo la Cloud está cambiando el presente y el futuro de las estrategias de análisis de datos permitiendo que las empresas y profesionales aprovechen al máximo los mismos para apoyar la toma de decisiones de manera eficiente y continua, marcando una clara diferencia entre estudios puntuales y el verdadero Machine Learning.",
+      "speaker": "Ana Agüero",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/photo_2019-06-10_16-30-49-e1560177140178.jpg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T11:30:00Z",
+      "endsAt": "2019-09-13T12:15:00Z",
+      "topics": ["ia"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "10",
+      "title": "Cómo empezar a hacer tus pruebas en iOS con Appium",
+      "description": "Cuando comienzas con la automatización de pruebas móviles, la primera herramienta que se te viene a la cabeza es Appium, y todo es maravilloso, sobre todo en Android ya que el 90% de los tutoriales que encuentras por internet son de Appium+Android+un Emulador, pero…¿Qué pasa con iOS?, ¿Es que las cosas de la manzanita no se prueban?, ¿Por qué?. Mi experiencia como Head de QA en una empresa de movilidad con desarrollo nativo iOS/Android me ha hecho aprender bastante sobre el tema de las pruebas automáticas en iOS y creo que es un tema interesante del que no hay demasiada información. El workshop será de 1h y tendrá un ejemplo práctico de hacer un test con Appium con una aplicación realizada por mí y que está disponible en Github (https://github.com/estefafdez/iOSTestApp) para que cualquiera pueda probarlo.",
+      "speaker": "Estefanía Fernández",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/06/perfil-estefania-e1559474156658.jpg",
+      "room": "Track 2",
+      "startsAt": "2019-09-13T11:30:00Z",
+      "endsAt": "2019-09-13T12:15:00Z",
+      "topics": ["testing", "mobile", "ios"],
+      "session": "1234",
+      "color": "red"
+    },
+    {
+      "id": "11",
+      "title": "Usa Serverless y sólo preocúpate de tu código",
+      "description": "Serverless es una arquitectura nativa de cloud que te permite delegar la responsabilidad operacional en tu proveedor cloud. Nunca más tendrás que pensar en servidores y podrás olvídate de las tareas de administración de infraestructura, lo que te podrá ayudar a reducir costes operativos, complejidad y aumentar tu agilidad e innovación. Construir aplicaciones Serverless significará que tus desarrolladores podrán enfocarse en el Core del negocio en vez de tener que preocuparte de administrar y operar servidores.",
+      "speaker": "José Luis Prieto Priego",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/06/15504dc4-7b5c-40f4-ab47-b9f44e48bf3a-e1559472652836.jpg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T14:00:00Z",
+      "endsAt": "2019-09-13T14:45:00Z",
+      "topics": ["cloud"],
+      "session": "1234",
+      "color": "blue"
+    },
+    {
+      "id": "12",
+      "title": "El papel de la arquitectura en la velocidad de entrega de software",
+      "description": "En esta charla hablaremos sobre los factores que influyen en el desempeño de las organizaciones que dependen de la entrega de software. Exploraremos el papel que juegan la arquitectura y el diseño de software y hablaremos sobre la diferencia entre ambos. Profundizaremos en el concepto de arquitectura y repasaremos diferentes estilos y patrones. Para ello nos apoyaremos en la historia de cómo ha evolucionado la base de código de Audiense durante sus 7 años de vida y veremos ejemplos de código (lo malo, lo no tan malo, lo nuevo y lo nuevo nuevo), diagramas de arquitectura y anécdotas reales que han ido amoldando nuestra forma actual de entender el desarrollo de software.",
+      "speaker": "Alfredo Artiles",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/06/IMG_0335.jpg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T14:50:00Z",
+      "endsAt": "2019-09-13T15:35:00Z",
+      "topics": ["software", "architecture"],
+      "session": "1234",
+      "color": "blue"
+    },
+
+    {
+      "id": "13",
+      "title": "Modelado de Errores Avanzado en Typescript",
+      "description": "Los mecanismos que Javascript provee para el manejo de errores son muy limitados y tendemos a pensar que la única manera que tenemos de gestionarlos es utilizando bloques try/catch pero, ¿hay otra manera de expresar errores? ¿cómo podemos forzar a los consumidores de un servicio a manejar todos los posibles errores? ¿cómo agregamos contexto a determinados errores? ¿cómo decidimos cuándo el resultado de una operación es un error en lugar de un resultado esperado? En esta charla exploraremos de qué manera Typescript puede ayudarnos en el manejo de errores y cómo podemos utilizarlo para que nunca más se nos escape un error inesperado.",
+      "speaker": "Javi Velasco",
+      "avatar": "https://salmorejotech.com/wp-content/uploads/2019/05/javivelasco-e1557730468818-768x768.jpeg",
+      "room": "Track 1",
+      "startsAt": "2019-09-13T15:40:00Z",
+      "endsAt": "2019-09-13T18:25:00Z",
+      "topics": ["testing"],
+      "session": "1234",
+      "color": "blue"
+    }
+  ],
+  "poi": {
+      "conference": [
+        {
+          "id": "1",
+          "title": "Rectorado de la Universidad de Córdoba",
+          "description": "Lugar donde se celebrará el congreso",
+          "url": "https://goo.gl/maps/YAWkZhSwNd3Gbxvj8"
+        },
+        {
+          "id": "2",
+          "title": "Mercado Victoria",
+          "description": "10% de descuento con tu acreditación",
+          "url": "https://goo.gl/maps/hRyLkeCgyWePJabt6"
+        }
+    ],
+
+    "lunch": [
+      {
+        "id": "1",
+        "title": "Boxer Food ",
+        "description": "Restaurantes Gourmet localizado cerca del congreso con una amplia carta de la gastronomía cordobesa, combinando lo mejor de la gastronomía norteamericana y mediterranea en sus platos. ",
+        "url": "https://goo.gl/maps/Fj6XbyYQkbpU1srP7"
+      },
+      {
+        "id": "2",
+        "title": "Cafetería del Rectorado",
+        "description": "A la entrada del rectorado se encuentra la cafetería, lugar ideal para descansar y tomar algo entre charlas junto con los demás asistentes del congreso.",
+        "url": "https://goo.gl/maps/WbrHrFrvaVBZwKrs6"
+      },
+      {
+        "id": "3",
+        "title": "Mercado Victoria",
+        "description": "10% de descuento con tu acreditación",
+        "url": "https://goo.gl/maps/hRyLkeCgyWePJabt6"
+      },
+      {
+        "id": "4",
+        "title": "Bar Moriles",
+        "description": "Paredes de ladrillo y sillas de hierro y madera en comedor con carácter para flamenquines y otras tapas. ",
+        "url": "https://goo.gl/maps/jpLwStQktRzchBLV7"
+      },
+      {
+        "id": "5",
+        "title": "La Fabbrica  ",
+        "description": "Desenfadado local de corte urbano y decoración ecléctica para pizzas con nombres de artistas o al gusto.",
+        "url": "https://goo.gl/maps/NZkqriJzB1PQy6Pu5"
+      }
+
+    ],
+
+    "breakfast": [
+      {
+        "id": "1",
+        "title": "Cafetería del rectorado",
+        "description": "A la entrada del rectorado se encuentra la cafetería, lugar ideal para descansar y tomar algo entre charlas junto con los demás asistentes del congreso.",
+        "url": "https://goo.gl/maps/WbrHrFrvaVBZwKrs6"
+      },
+      {
+        "id": "2",
+        "title": "Restaurante Canadian",
+        "description": "Localizado a 150 metros del congreso, este restaurante ofrece una amplia carta de desayunos económicos y de gran calidad, lugar excelente para reponer fuerzas y hacer networking",
+        "url": "https://goo.gl/maps/b51zFpMDnbFqN5Q97"
+      },
+      {
+        "id": "3",
+        "title": "El diario de Noah",
+        "description": "Especializado en desayunos, este bar ofrece un ambiente tranquilo donde conversar y tomar unas cervezas acompañado de una tapa típica de la ciudad",
+        "url": "https://goo.gl/maps/2kJopC3Bqhtecgut5"
+      },
+      {
+        "id": "4",
+        "title": "Pasteleria Savoy",
+        "description": "Cafetería, panadería, pastelería con un variado surtido de dulces, lugar ideal para tomar un cafe tranquilamente y recargar energías.",
+        "url": "https://goo.gl/maps/NgrfUZDezBgrnYkK8"
+      }
+    ]
+  }
+}

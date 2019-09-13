@@ -6,12 +6,17 @@ import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import * as actions from "../../src/talks/actions";
+import BottomMenu from "../../components/BottomMenu";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
+    },
+    footer: {
+      width: "100%",
+      position: "fixed",
+      bottom: 0,
     },
     appBarSpacer: theme.mixins.toolbar,
     content: {
@@ -23,7 +28,6 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
-  code?: string | string[];
   session: Session;
   talks: Talk[];
 }
@@ -61,7 +65,7 @@ const reduceTalks = (talks: Talk[]) => {
   );
 };
 
-const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
+const SessionPage: NextPage<Props> = ({ session, talks }) => {
   const [filteredTalks, setFilteredTalks] = useState(reduceTalks(talks));
   const dispatch = useDispatch();
 
@@ -79,43 +83,40 @@ const SessionPage: NextPage<Props> = ({ code, session, talks }) => {
   const classes = useStyles({});
 
   return (
-    <div className={classes.root}>
-      <AppBar color="primary" position="absolute">
-        <Toolbar>
-          <Avatar src={session.logo} style={{ marginRight: "5px" }} />
-          <Typography component="h1" variant="h6" color="inherit" noWrap>
-            {session.title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <UITalkList
-          filter={[]}
-          talks={filteredTalks.filteredCurrentTalks}
-          title="Current talks"
-          handleOnClick={(value: string) =>
-            dispatch(actions.openSessionTalkPage({ value }))
-          }
-        />
-        <UITalkList
-          filter={[]}
-          talks={filteredTalks.filteredNextTalks}
-          title="Next talks"
-          handleOnClick={(value: string) =>
-            dispatch(actions.openSessionTalkPage({ value }))
-          }
-        />
-        <UITalkList
-          filter={[]}
-          talks={filteredTalks.filteredPassedTalks}
-          title="Finished talks"
-          handleOnClick={(value: string) =>
-            dispatch(actions.openSessionTalkPage({ value }))
-          }
-        />
-      </main>
-    </div>
+    <>
+      <div className={classes.root}>
+        <AppBar color="primary" position="absolute">
+          <Toolbar>
+            <Avatar src={session.logo} style={{ marginRight: "5px" }} />
+            <Typography component="h1" variant="h6" color="inherit" noWrap>
+              {session.title}
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <main className={classes.content}>
+          <div className={classes.appBarSpacer} />
+          <UITalkList
+            filter={[]}
+            talks={filteredTalks.filteredCurrentTalks}
+            title="Ahora mismo"
+            handleOnClick={(value: string) => true}
+          />
+          <UITalkList
+            filter={[]}
+            talks={filteredTalks.filteredNextTalks}
+            title="Próximas charlas"
+            handleOnClick={(value: string) => true}
+          />
+          <UITalkList
+            filter={[]}
+            talks={filteredTalks.filteredPassedTalks}
+            title="Charlas finalizadas"
+            handleOnClick={(value: string) => true}
+          />
+        </main>
+      </div>
+      <BottomMenu value={"schedule"} />
+    </>
   );
 };
 
@@ -138,7 +139,7 @@ SessionPage.getInitialProps = async ({ query }) => {
 
   const talks = await talksRequest.json();
 
-  return { code, session, talks };
+  return { session, talks };
 };
 
 export default SessionPage;

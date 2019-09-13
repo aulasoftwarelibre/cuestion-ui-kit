@@ -1,12 +1,12 @@
-import { ErrorMessage, SessionInput } from "@cuestion/ui";
+import { ErrorMessage } from "@cuestion/ui";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Background } from "../components/Background";
+import BottomMenu from "../components/BottomMenu";
 import { State } from "../src/reducer";
-import * as actions from "../src/session/actions";
 import { SessionState } from "../src/session/types";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     logo: {
       maxWidth: "100%",
+      width: "80%",
       height: "auto",
       marginBottom: "2rem",
     },
@@ -34,19 +35,18 @@ const HomePage: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="Cuestion"
+        title="SalmorejoTech 2019"
         description="Question platform for the SalmorejoTech conference. Send your question or vote the ones that you find most interesting and we will make them for you to the speakers."
         openGraph={{
           type: "website",
-          locale: "en_US",
-          url: "https://cuestion.salmorejotech.com",
+          locale: "es_ES",
+          url: "https://agenda.salmorejotech.com",
           title: "Cuestion",
           description:
             "Question platform for the SalmorejoTech conference. Send your question or vote the ones that you find most interesting and we will make them for you to the speakers.",
           images: [
             {
-              url:
-                "https://cuestion.salmorejotech.com/static/img/cuestion-logo.png",
+              url: "https://agenda.salmorejotech.com/static/img/salmorejo.png",
             },
           ],
           site_name: "Cuestion - SalmorejoTech",
@@ -60,16 +60,11 @@ const HomePage: NextPage = () => {
         <img
           style={{ color: "#ffffff" }}
           className={classes.logo}
-          src="/static/img/cuestion-logo.svg"
-        />
-        <SessionInput
-          length={4}
-          handleOnSubmit={(value: string) =>
-            dispatch(actions.openSessionRequest({ value }))
-          }
+          src="/static/img/salmorejotech-logo.svg"
         />
       </div>
       <Background />
+      <BottomMenu value={null} />
       <ErrorMessage error={session.error} errorMessage={session.errorMessage} />
     </>
   );
